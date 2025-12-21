@@ -14,14 +14,6 @@ import Gallery8 from '../assets/Gallery8.jpeg';
 import Gallery9 from '../assets/Gallery9.jpeg';
 import Gallery10  from '../assets/Gallery10.jpeg';
 
-
-
-
-
-
-
-
-
 export const assets = {
   logo,
   Carousel1,
@@ -40,6 +32,8 @@ export const assets = {
   Gallery10,
 
 };
+
+export const images = [Carousel1, Carousel2, Carousel3, Carousel4];
 
 
 export const filmItems = [
@@ -86,8 +80,6 @@ export const filmItems = [
 ];
 
 export const photoItems = [
-	
-	
 	{ url: Gallery1, category: "pre-wedding" },
 	{ url: Gallery2, category: "engagement" },
 	{ url: Gallery7, category: "pre-wedding" },
@@ -98,9 +90,4 @@ export const photoItems = [
 	{ url: Gallery6, category: "Haldi" },
 	{ url: Gallery9, category: "pre-wedding" },
 	{ url: Gallery10, category: "engagement" },
-
-
-
-	
 ];
-

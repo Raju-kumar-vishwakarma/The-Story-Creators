@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const faqItems = [
@@ -112,23 +112,24 @@ const faqItems = [
 	},
 	{
 		question: "10. How to book he Story Creators?",
-		answer: <p>For booking us, call at +91 74153 31652.</p>,
+		answer: <p>For booking us, call at +91 91316 28219 / +91 81095 19281.</p>,
 	},
 ];
 
 const FAQ = () => {
-	const [openIndex, setOpenIndex] = useState(0);
+	const [openIndex, setOpenIndex] = useState(-1);
 
 	const toggleIndex = (index) => {
 		setOpenIndex((prev) => (prev === index ? -1 : index));
 	};
 
 	return (
-		<section className="w-full bg-white  px-4 sm:px-6 lg:px-12">
+		<section className="w-full bg-white   px-4 sm:px-6 lg:px-12">
 			<div className="mx-auto max-w-5xl space-y-8">
-				<div className="text-center space-y-2">
-					<p className="text-sm font-semibold uppercase tracking-[0.25em] text-gray-500">Need Help?</p>
-					<h2 className="text-3xl sm:text-4xl font-bold text-gray-900">FAQ?</h2>
+				<div className="mb-6 md:mb-10">
+					<h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center"
+						style={{ fontFamily: "'Great Vibes', cursive" }}
+					>FAQ</h1>
 				</div>
 
 				<div className="space-y-4">
@@ -144,11 +145,11 @@ const FAQ = () => {
 									onClick={() => toggleIndex(index)}
 									className="w-full flex items-center justify-between bg-gray-50 px-5 py-4 text-left"
 								>
-									<span className="text-base sm:text-lg font-semibold text-gray-900">{item.question}</span>
-									<span className="ml-4 text-xl text-gray-500">{isOpen ? "−" : "+"}</span>
+									<span className="text-base sm:text-lg text-gray-900 font-extralight">{item.question}</span>
+									<span className="ml-4 text-xl text-gray-500 font-extraligh">{isOpen ? "−" : "+"}</span>
 								</button>
 								{isOpen && (
-									<div className="px-5 pb-5 pt-2 bg-white text-gray-700 text-sm sm:text-base leading-relaxed space-y-3">
+									<div className="px-5 pb-5 pt-2 bg-white text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 font-extraligh">
 										{item.answer}
 									</div>
 								)}
@@ -157,7 +158,7 @@ const FAQ = () => {
 					})}
 				</div>
 
-				<div className="text-center text-sm text-gray-600">
+				<div className="text-center text-sm text-gray-600 mb-20">
 					<p>
 						*Feel free to reach out if you have any other questions or concerns!{" "}
 						<NavLink to="/contact" className="font-semibold text-indigo-600 hover:text-indigo-800">

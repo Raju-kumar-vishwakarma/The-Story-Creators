@@ -1,17 +1,16 @@
 
 import React from 'react';
-import Carousel from '../components/Carousel';
-import GalleryImg from '../components/GalleryImg';
+import Carousel from '../components/Onboarding/Carousel';
 import FAQ from '../components/Onboarding/FAQ';
+import Gallery from '../components/Onboarding/Gallery';
 
 const OnboardingScreen = () => {
 
     return (
-        <div className="min-h-screen mt-20 space-y-10">
+        <div className="mt-20 space-y-10">
             <Carousel/>
-            <GalleryImg/>
+            <Gallery/>
             <FAQ/>
-
         </div>
     );
 };

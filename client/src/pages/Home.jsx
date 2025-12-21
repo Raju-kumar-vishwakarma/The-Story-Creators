@@ -1,5 +1,4 @@
 
-import GalleryImg from "../components/GalleryImg";
 import OnboardingScreen from "./OnboardingScreen";
 
 const Home = () => {
