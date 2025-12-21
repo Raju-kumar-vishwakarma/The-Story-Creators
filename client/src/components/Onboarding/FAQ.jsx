@@ -124,7 +124,7 @@ const FAQ = () => {
 	};
 
 	return (
-		<section className="w-full bg-white   px-4 sm:px-6 lg:px-12">
+		<section className="w-full bg-white px-4 sm:px-6 lg:px-12 mb-15">
 			<div className="mx-auto max-w-5xl space-y-8">
 				<div className="mb-6 md:mb-10">
 					<h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center"
@@ -132,24 +132,45 @@ const FAQ = () => {
 					>FAQ</h1>
 				</div>
 
-				<div className="space-y-4">
+				<div className="max-w-2xl mx-auto p-4 md:p-0 space-y-4 text-left">
 					{faqItems.map((item, index) => {
 						const isOpen = openIndex === index;
 						return (
 							<div
 								key={item.question}
-								className="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+								className="faq-item font-light hover:border border-gray-200 md:text-lg cursor-pointer transition-all rounded-md p-4"
 							>
-								<button
-									type="button"
-									onClick={() => toggleIndex(index)}
-									className="w-full flex items-center justify-between bg-gray-50 px-5 py-4 text-left"
-								>
-									<span className="text-base sm:text-lg text-gray-900 font-extralight">{item.question}</span>
-									<span className="ml-4 text-xl text-gray-500 font-extraligh">{isOpen ? "−" : "+"}</span>
-								</button>
+								<div className="flex justify-between items-center">
+									<h3 
+										className="w-5/6 font-extralight"
+										onClick={() => toggleIndex(index)}
+									>
+										{item.question}
+									</h3>
+									<button 
+										className="toggle bg-special-red/10 w-8 h-8 flex items-center justify-center rounded-full"
+										onClick={() => toggleIndex(index)}
+									>
+										<svg 
+											xmlns="http://www.w3.org/2000/svg" 
+											width="22" 
+											height="22" 
+											viewBox="0 0 24 24" 
+											fill="none" 
+											stroke="currentColor" 
+											strokeWidth="2" 
+											strokeLinecap="round" 
+											strokeLinejoin="round" 
+											className="lucide lucide-chevron-up text-special-red" 
+											aria-hidden="true"
+											style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s' }}
+										>
+											<path d="m18 15-6-6-6 6"></path>
+										</svg>
+									</button>
+								</div>
 								{isOpen && (
-									<div className="px-5 pb-5 pt-2 bg-white text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 font-extraligh">
+									<div className="mt-3 text-gray-700 text-sm sm:text-base leading-relaxed space-y-3 font-extralight">
 										{item.answer}
 									</div>
 								)}
@@ -157,14 +178,13 @@ const FAQ = () => {
 						);
 					})}
 				</div>
-
-				<div className="text-center text-sm text-gray-600 mb-20">
-					<p>
-						*Feel free to reach out if you have any other questions or concerns!{" "}
-						<NavLink to="/contact" className="font-semibold text-indigo-600 hover:text-indigo-800">
-							Contact Us
-						</NavLink>
-					</p>
+				<div className="mt-8 flex justify-center">
+					<a
+						href="/service"
+						className="px-5 py-2 rounded-full border border-gray-300 bg-white hover:bg-gray-100 transition font-extralight"
+					>
+						See All
+					</a>
 				</div>
 			</div>
 		</section>

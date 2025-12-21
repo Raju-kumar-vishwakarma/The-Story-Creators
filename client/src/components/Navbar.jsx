@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { assets } from "../assets/assets";
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
@@ -22,7 +23,7 @@ const Navbar = () => {
                 </h1>
             </NavLink>
 
-            <div className="hidden md:flex items-center gap-8 text-nowrap text-lg font-light ">
+            <div className="hidden md:flex items-center gap-8 text-nowrap text-lg font-extralight ">
 
                 <NavLink to="/" style={getActivePage} className="nav-link hover:opacity-70 transition">Home</NavLink>
                 <NavLink to="/our-work" style={getActivePage} className="nav-link hover:opacity-70 transition">Our Work</NavLink>
@@ -41,17 +42,13 @@ const Navbar = () => {
                 >
                     {open ? (
                         // Close icon (X)
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
                             <line x1="18" y1="6" x2="6" y2="18"></line>
                             <line x1="6" y1="6" x2="18" y2="18"></line>
                         </svg>
                     ) : (
                         // Hamburger icon
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-black">
-                            <line x1="3" y1="12" x2="21" y2="12"></line>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <line x1="3" y1="18" x2="21" y2="18"></line>
-                        </svg>
+                        <img src={assets.MenuIcon} alt="Close Menu" className="w-7"/>
                     )}
 
                 </button>
@@ -59,7 +56,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="fixed top-0  left-0 w-full max-h-[calc(100vh-52px)] sm:max-h-[calc(100vh-61px)] bg-white/95 backdrop-blur-2xl mt-20 flex flex-col items-center gap-8 px-5 md:hidden z-50 border-t border-gray-300 overflow-y-auto animate-slideDown shadow-lg border-b-black/10 text-2xl font-light py-8">
+                <div className="fixed top-0  left-0 w-full max-h-[calc(100vh-52px)] sm:max-h-[calc(100vh-61px)] bg-white/95 backdrop-blur-2xl mt-20 flex flex-col items-center gap-8 px-5 md:hidden z-50 border-t border-gray-300 overflow-y-auto animate-slideDown shadow-lg border-b-black/10 text-2xl font-extralight py-8">
                     <NavLink to="/" onClick={() => setOpen(false)} style={getActivePage} className="hover:opacity-70 transition ">Home</NavLink>
                     <NavLink to="/our-work" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition">Our Work</NavLink>
                     <NavLink to="/films" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition">Films</NavLink>

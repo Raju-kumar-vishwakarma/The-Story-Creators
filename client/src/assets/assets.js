@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import MenuIcon from "../assets/menu_icon.svg";
 import Carousel1 from "../assets/Carousel1.jpeg";
 import Carousel2 from "../assets/Carousel2.jpeg";
 import Carousel3 from "../assets/Carousel3.jpeg";
@@ -13,9 +14,12 @@ import Gallery7 from '../assets/Gallery7.jpeg';
 import Gallery8 from '../assets/Gallery8.jpeg';
 import Gallery9 from '../assets/Gallery9.jpeg';
 import Gallery10  from '../assets/Gallery10.jpeg';
+import film1 from '../assets/film1.png';
+import film2 from '../assets/film2.png';
 
 export const assets = {
   logo,
+  MenuIcon,
   Carousel1,
   Carousel2,
   Carousel3,
@@ -38,45 +42,15 @@ export const images = [Carousel1, Carousel2, Carousel3, Carousel4];
 
 export const filmItems = [
 	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/Padam-Navita-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=5jKZeaLViu0",
-		category: "pre-wedding",
-	},
-	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/RPR_5349-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=y0G5O7KeBko",
+		thumb: film1,
+		video: "https://www.youtube.com/shorts/s5n2muO4fcQ?feature=share",
 		category: "wedding",
 	},
 	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/DKP_9029-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=28xsXWapXmY",
+		thumb: film2,
+		video: "https://www.youtube.com/shorts/0NYBTrGKvW0?feature=share",
 		category: "wedding",
-	},
-	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/RPR_3285edite-1-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=rk-Sd2raKEQ",
-		category: "pre-wedding",
-	},
-	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/SAM03131-1-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=J0Ckat6zCTc",
-		category: "wedding",
-	},
-	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/RPR_2087-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=_7hZOHN8SSc",
-		category: "pre-wedding",
-	},
-	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/54-2-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=3TXGxM30iHs",
-		category: "wedding",
-	},
-	{
-		thumb: "https://mediaworkersfilms.com/wp-content/uploads/2024/02/DSC04921-1-scaled.jpg",
-		video: "https://www.youtube.com/watch?v=beQBOO6LVAU",
-		category: "wedding",
-	},
+	}
 ];
 
 export const photoItems = [
