@@ -1,0 +1,116 @@
+/* Simple fade-up animation used by gallery items */
+.fade-in {
+	opacity: 0;
+	transform: translateY(10px);
+	animation: fadeInUp 0.65s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Extra variants so cards can feel varied */
+.fade-right {
+	opacity: 0;
+	transform: translateX(-10px);
+	animation: fadeRight 0.65s ease-out forwards;
+}
+
+@keyframes fadeRight {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.fade-left {
+	opacity: 0;
+	transform: translateX(10px);
+	animation: fadeLeft 0.65s ease-out forwards;
+}
+
+@keyframes fadeLeft {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.zoom-in {
+	opacity: 0;
+	transform: scale(0.97);
+	animation: zoomIn 0.65s ease-out forwards;
+}
+
+@keyframes zoomIn {
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.fade-down {
+	opacity: 0;
+	transform: translateY(-10px);
+	animation: fadeDown 0.65s ease-out forwards;
+}
+
+@keyframes fadeDown {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Top loading bar for page transitions */
+.page-loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background: linear-gradient(90deg, #c23700, #ff7a3d, #c23700);
+	background-size: 200% 100%;
+	animation: loaderSlide 1s ease-in-out infinite;
+	z-index: 60;
+}
+
+@keyframes loaderSlide {
+	0% {
+		transform: translateX(-10%);
+		background-position: 0 0;
+	}
+	50% {
+		transform: translateX(0);
+		background-position: 100% 0;
+	}
+	100% {
+		transform: translateX(10%);
+		background-position: 0 0;
+	}
+}
+
+/* Underline hover animation for nav links */
+.nav-link {
+	position: relative;
+	display: inline-block;
+	transition: color 0.3s ease;
+}
+
+.nav-link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: -4px;
+	left: 0;
+	background-color: #C23700;
+	transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-link:hover::after {
+	width: 100%;
+}
