@@ -23,11 +23,11 @@ const Weeding = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Gallery Section */}
-            <section className="w-full mb-15 py-10 md:py-10 min-h-screen bg-white space-y-10 mt-20">
+            <section className="w-full mb-15 pt-10 md:pt-16 min-h-screen bg-white space-y-10 mt-20">
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
                     <div className="mb-16">
                         <h2
-                            className="text-4xl md:text-6xl font-bold text-black mb-12 text-center"
+                            className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
                             style={{ fontFamily: "'Great Vibes', cursive" }}
                         >
                             Wedding Gallery

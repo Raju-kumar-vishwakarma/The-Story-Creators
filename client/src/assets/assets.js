@@ -1,93 +1,89 @@
 import logo from "../assets/logo.png";	
 import MenuIcon from "../assets/menu_icon.svg";
 
-import Carousel1 from "../assets/Carousel1.jpeg";
-import Carousel2 from "../assets/Carousel2.jpeg";
-import Carousel3 from "../assets/Carousel3.jpeg";
-import Carousel4 from "../assets/Carousel4.jpeg";
+import carousel1 from "../assets/carousel/carousel1.jpeg";
+import carousel2 from "../assets/carousel/carousel2.jpeg";
+import carousel3 from "../assets/carousel/carousel3.jpeg";
+import carousel4 from "../assets/carousel/carousel4.jpeg";
 
-import Gallery1 from '../assets/Gallery1.jpeg';
-import Gallery2 from '../assets/Gallery2.jpeg';
-import Gallery3 from '../assets/Gallery3.jpeg';
-import Gallery4 from '../assets/Gallery4.jpeg';
-import Gallery5 from '../assets/Gallery5.jpeg';
-import Gallery6 from '../assets/Gallery6.jpeg';
-import Gallery7 from '../assets/Gallery7.jpeg';
-import Gallery8 from '../assets/Gallery8.jpeg';
-import Gallery9 from '../assets/Gallery9.jpeg';
-import Gallery10  from '../assets/Gallery10.jpeg';
+import gallery1 from '../assets/gallery/gallery1.jpeg';
+import gallery2 from '../assets/gallery/gallery2.jpeg';
+import gallery3 from '../assets/gallery/gallery3.jpeg';
+import gallery4 from '../assets/gallery/gallery4.jpeg';
+import gallery5 from '../assets/gallery/gallery5.jpeg';
+import gallery6 from '../assets/gallery/gallery6.jpeg';
+import gallery7 from '../assets/gallery/gallery7.jpeg';
+import gallery8 from '../assets/gallery/gallery8.jpeg';
+import gallery9 from '../assets/gallery/gallery9.jpeg';
+import gallery10  from '../assets/gallery/gallery10.jpeg';
 
-import film1 from '../assets/film1.png';
-import film2 from '../assets/film2.png';
+import film1 from '../assets/films/film1.png';
+import film2 from '../assets/films/film2.png';
 
-import wedding1 from '../assets/Wedding1.jpeg';
-import wedding2 from '../assets/Wedding2.jpeg';
-import wedding3 from '../assets/Wedding3.jpeg';
-import wedding4 from '../assets/Wedding4.jpeg';
+import wedding1 from '../assets/wedding/wedding1.jpeg';
+import wedding2 from '../assets/wedding/wedding2.jpeg';
+import wedding3 from '../assets/wedding/wedding3.jpeg';
+import wedding4 from '../assets/wedding/wedding4.jpeg';
 
-import PreWedding1 from '../assets/PreWedding1.jpeg';
-import PreWedding2 from '../assets/PreWedding2.jpeg';
+import prewedding1 from '../assets/prewedding/pre_wedding1.jpeg';
+import prewedding2 from '../assets/prewedding/pre_wedding2.jpeg';
 
-import Engagement2 from '../assets/Engagement2.jpeg';
-import Engagement3 from '../assets/Engagement3.jpeg';
-
-import Haldi1 from '../assets/Haldi1.jpeg';
-import Haldi2 from '../assets/Haldi2.jpeg';
-import Haldi3 from '../assets/Haldi3.jpeg';
-import Haldi4 from '../assets/Haldi4.jpeg';
-import Haldi5 from '../assets/Haldi5.jpeg';
-import Haldi6 from '../assets/Haldi6.jpeg';
-import Haldi7 from '../assets/Haldi7.jpeg';
-import Haldi8 from '../assets/Haldi8.jpeg';
-import Haldi9 from '../assets/Haldi9.jpeg';
-import Haldi10 from '../assets/Haldi10.jpeg';
+import engagement2 from '../assets/engagement/engagement2.jpeg';
+import engagement3 from '../assets/engagement/engagement3.jpeg';
 
 
-
-
-
+import haldi1 from '../assets/haldi/haldi1.jpeg';
+import haldi2 from '../assets/haldi/haldi2.jpeg';
+import haldi3 from '../assets/haldi/haldi3.jpeg';
+import haldi4 from '../assets/haldi/haldi4.jpeg';
+import haldi5 from '../assets/haldi/haldi5.jpeg';
+import haldi6 from '../assets/haldi/haldi6.jpeg';
+import haldi7 from '../assets/haldi/haldi7.jpeg';
+import haldi8 from '../assets/haldi/haldi8.jpeg';
+import haldi9 from '../assets/haldi/haldi9.jpeg';
+import haldi10 from '../assets/haldi/haldi10.jpeg';
 
 
 export const assets = {
   logo,
   MenuIcon,
-  Carousel1,
-  Carousel2,
-  Carousel3,
-  Carousel4,
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery4,
-  Gallery5,
-  Gallery6,
-  Gallery7,
-  Gallery8,
-  Gallery9,
-  Gallery10,
+  carousel1,
+  carousel2,
+  carousel3,
+  carousel4,
+  gallery1,
+  gallery2,
+  gallery3,
+  gallery4,
+  gallery5,
+  gallery6,
+  gallery7,
+  gallery8,
+  gallery9,
+  gallery10,
   wedding1,
   wedding2,
   wedding3,
   wedding4,
-  PreWedding1,
-  PreWedding2,
+  prewedding1,
+  prewedding2,
 
-  Engagement2,
-  Engagement3,
-  Haldi1,
-  Haldi2,
-  Haldi3,
-  Haldi4,
-  Haldi5,
-  Haldi6,
-  Haldi7,
-  Haldi8,
-  Haldi9,
-  Haldi10,
+  engagement2,
+  engagement3,
+  haldi1,
+  haldi2,
+  haldi3,
+  haldi4,
+  haldi5,
+  haldi6,
+  haldi7,
+  haldi8,
+  haldi9,
+  haldi10,
 
 };
 
-export const images = [Carousel1, Carousel2, Carousel3, Carousel4];
+export const images = [carousel1, carousel2, carousel3, carousel4];
 
 
 export const filmItems  = [
@@ -104,14 +100,35 @@ export const filmItems  = [
 ];
 
 export const photoItems = [
-	{ url: Gallery1, category: "pre-wedding" },
-	{ url: Gallery2, category: "engagement" },
-	{ url: Gallery7, category: "pre-wedding" },
-	{ url: Gallery8, category: "Haldi" },
-	{ url: Gallery4, category: "pre-wedding" },
-	{ url: Gallery5, category: "engagement" },
-	{ url: Gallery6, category: "Haldi" },
-	{ url: Gallery9, category: "pre-wedding" },
-	{ url: Gallery10, category: "engagement" },
+	{ url: gallery1, category: "pre-wedding" },
+	{ url: gallery2, category: "haldi" },
+	{ url: gallery7, category: "pre-wedding" },
+	{ url: gallery8, category: "haldi" },
+	{ url: gallery4, category: "pre-wedding" },
+	{ url: gallery5, category: "engagement" },
+	{ url: gallery6, category: "haldi" },
+	{ url: gallery9, category: "pre-wedding" },
+	{ url: gallery10, category: "engagement" },
 ];
 
+export const haldiImages = [
+    { key: "Haldi1", src: "haldi1" },
+    { key: "Haldi2", src: "haldi2" },
+    { key: "Haldi3", src: "haldi3" },
+    { key: "Haldi4", src: "haldi4" },
+    { key: "Haldi5", src: "haldi5" },
+    { key: "Haldi6", src: "haldi6" },
+    { key: "Haldi7", src: "haldi7" },
+    { key: "Haldi8", src: "haldi8" },
+    { key: "Haldi9", src: "haldi9" },
+    { key: "Haldi10", src: "haldi10" },
+];
+
+const preWeddingImages = [
+    { key: "PreWedding1", src: "prewedding1" },
+    { key: "PreWedding2", src: "prewedding2" },
+    { key: "PreWedding3", src: "prewedding3" },
+    { key: "PreWedding4", src: "prewedding4" },
+    { key: "PreWedding5", src: "prewedding5" },
+    { key: "PreWedding6", src: "prewedding6" },
+];

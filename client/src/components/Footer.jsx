@@ -31,6 +31,10 @@ const Footer = () => {
                             <p className="font-extralight">Street No.4, Mahadev Ghat, Tiranga Chouk, Raipur</p>
                         </div>
                         <div className="font-light leading-snug">
+                            <h2>Phone:</h2>
+                           <p className="font-extralight">+91 91316 28219, +91 81095 19281</p>
+                        </div>
+                        <div className="font-light leading-snug">
                             <h2>Email:</h2>
                             <p className="font-extralight ">photography.thestorycreators@gmail.com</p>
                         </div>
@@ -39,27 +43,29 @@ const Footer = () => {
 
                 {/* Center Navigation */}
                 <div className="flex flex-row md:justify-around w-full items-start justify-start gap-22 sm:gap-12 md:gap-0 ">
-                    <div className="flex flex-col gap-y-2 text-base sm:text-lg md:text-xl font-extralight ">
+                    <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight ">
                         <h4 className="font-light mb-1">Quick Links</h4>
                         <NavLink to="/" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Home</NavLink>
                         <NavLink to="/our-work" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Our Work</NavLink>
                         <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
                         <NavLink to="/contact" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Contact</NavLink>
                         <NavLink to="/about-us" className="hover:underline text-gray-700 transition-all hover:animate-pulse">About Us</NavLink>
+                        <a href="https://wa.me/919131628219" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Book Now</a>
                     </div>
-                    <div className="flex flex-col gap-y-2 text-base sm:text-lg md:text-xl font-extralight">
+                    <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight">
                         <h4 className="font-light mb-1">Services</h4>
                         <NavLink to="/wedding" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Wedding</NavLink>
                         <NavLink to="/pre-wedding" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Pre-Wedding</NavLink>
                         <NavLink to="/engagement" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Engagement</NavLink>
                         <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
-                        <NavLink to="/events" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Events</NavLink>
+                        <NavLink to="/haldi" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Haldi</NavLink>
                     </div>
                 </div>
 
                 {/* Social Links */}
                 <div className="space-y-4 text-xl sm:text-2xl font-light leading-snug w-full md:w-auto">
                     <h4>Follow Us</h4>
+                    <p className="font-light md:text-xl text-sm">The Story Creators</p>
                     <div className="flex gap-4 sm:gap-6 text-gray-600">
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:text-blue-600">
                             <Facebook size={20} className="sm:w-6 sm:h-6" />

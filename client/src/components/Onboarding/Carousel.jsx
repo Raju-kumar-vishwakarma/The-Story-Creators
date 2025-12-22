@@ -46,10 +46,10 @@ const Carousel = () => {
             </div>
             <div className="pt-2">
               <a
-                href="https://www.instagram.com/thestorycreators_photography/"
+                 href="https://wa.me/919131628219"
                 className="inline-flex items-center justify-center rounded-full hover:bg-white text-white px-7 py-2.5 text-sm font-light bg-primary-red/50 hover:text-black  hover:scale-105 transition-all duration-300"
               >
-                Explore Now
+                Book Now
               </a>
             </div>
           </div>

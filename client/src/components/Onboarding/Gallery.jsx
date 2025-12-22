@@ -102,7 +102,7 @@ const Gallery = () => {
 			{ value: "engagement", label: "ENGAGEMENT" },
 			{ value: "pre-wedding", label: "PRE WEDDING" },
 			{ value: "wedding", label: "WEDDING" },
-			{ value: "Haldi", label: "HALDI" },
+			{ value: "haldi", label: "HALDI" },
 		],
 		[]
 	);

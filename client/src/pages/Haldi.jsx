@@ -1,19 +1,8 @@
 import React, { useState } from "react";
-import { assets } from "../assets/assets";
+import { assets, haldiImages } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
 
-const haldiImages = [
-    { key: "Haldi1", src: "Haldi1" },
-    { key: "Haldi2", src: "Haldi2" },
-    { key: "Haldi3", src: "Haldi3" },
-    { key: "Haldi4", src: "Haldi4" },
-    { key: "Haldi5", src: "Haldi5" },
-    { key: "Haldi6", src: "Haldi6" },
-    { key: "Haldi7", src: "Haldi7" },
-    { key: "Haldi8", src: "Haldi8" },
-    { key: "Haldi9", src: "Haldi9" },
-    { key: "Haldi10", src: "Haldi10" },
-];
+
 
 const Haldi = () => {
     const [loadedImages, setLoadedImages] = useState({});
@@ -31,7 +20,7 @@ const Haldi = () => {
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
                     <div className="mb-16">
                         <h2
-                            className="text-4xl md:text-6xl font-bold text-black mb-12 text-center"
+                            className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
                             style={{ fontFamily: "'Great Vibes', cursive" }}
                         >
                             Haldi Gallery

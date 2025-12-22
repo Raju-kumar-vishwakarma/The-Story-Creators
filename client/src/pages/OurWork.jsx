@@ -15,23 +15,24 @@ const categories = [
 		id: "pre-wedding",
 		title: "Pre Wedding",
 		images: [
-			{ key: "PreWedding1", src: "PreWedding1" },
-			{ key: "PreWedding2", src: "PreWedding2" },
+			{ key: "PreWedding1", src: "prewedding1" },
+			{ key: "PreWedding2", src: "prewedding2" },
 		],
 	},
 	{
 		id: "engagement",
 		title: "Engagement",
 		images: [
-			{ key: "Engagement3", src: "Engagement3" },
-			{ key: "Engagement2", src: "Engagement2" },
+			{ key: "Engagement3", src: "engagement3" },
+			{ key: "Engagement2", src: "engagement2" },
 		],
 	},
 	{
 		id: "haldi",
 		title: "Haldi",
 		images: [
-			{ key: "Haldi1", src: "Haldi1" },
+			{ key: "Haldi1", src: "haldi1" },
+			{ key: "Haldi2", src: "haldi2" },
 		],
 	},
 ];

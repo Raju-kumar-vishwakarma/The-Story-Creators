@@ -3,12 +3,12 @@ import { assets } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
 
 const engagementImages = [
-    { key: "Engagement1", src: "Engagement1" },
-    { key: "Engagement2", src: "Engagement2" },
-    { key: "Engagement3", src: "Engagement3" },
-    { key: "Engagement4", src: "Engagement4" },
-    { key: "Engagement5", src: "Engagement5" },
-    { key: "Engagement6", src: "Engagement6" },
+    { key: "Engagement1", src: "engagement1" },
+    { key: "Engagement2", src: "engagement2" },
+    { key: "Engagement3", src: "engagement3" },
+    { key: "Engagement4", src: "engagement4" },
+    { key: "Engagement5", src: "engagement5" },
+    { key: "Engagement6", src: "engagement6" },
 ];
 
 const Engagement = () => {
@@ -26,7 +26,7 @@ const Engagement = () => {
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
                     <div className="mb-16">
                         <h2
-                            className="text-4xl md:text-6xl font-bold text-black mb-12 text-center"
+                            className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
                             style={{ fontFamily: "'Great Vibes', cursive" }}
                         >
                             Engagement Gallery

@@ -41,7 +41,7 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="w-full px-4 sm:px-6 py-10 md:py-16 min-h-screen bg-white mt-20">
+        <div className="w-full px-4 sm:px-6 pt-10 md:pt-16 min-h-screen bg-white mt-20">
             <h1 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
 						    style={{ fontFamily: "'Great Vibes', cursive" }}
 		    >Contact Us</h1>
