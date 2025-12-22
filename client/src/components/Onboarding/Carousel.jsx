@@ -31,7 +31,7 @@ const Carousel = () => {
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight"
             style={{ fontFamily: "'Great Vibes', cursive" }}
             >
-              The Story Creator
+              The Story Creators
             </h1>
             <div className="flex justify-center">
               <span className="h-[0.5px] w-28 bg-white/80" />

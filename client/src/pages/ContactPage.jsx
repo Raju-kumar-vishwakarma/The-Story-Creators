@@ -113,12 +113,12 @@ const ContactPage = () => {
                         </button>
                     </form>
                 </div>
-
+{/* 
                 <img
                     className="hidden md:block md:mr-16 mb-16 md:mt-10 max-h-96 object-contain rounded"
                     src={assets.ContactImage}
                     alt="Contact Us"
-                />
+                /> */}
             </div>
         </div>
     );

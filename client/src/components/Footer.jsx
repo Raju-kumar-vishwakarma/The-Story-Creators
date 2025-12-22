@@ -83,7 +83,7 @@ const Footer = () => {
 
             {/* Bottom Bar */}
             <div className="border-t border-gray-100 py-6 text-center text-sm text-gray-500 space-y-1">
-                <p>Copyright © {currentYear} ZSCircle – All Rights Reserved.</p>
+                <p>Copyright © {currentYear} TheStoryCreators – All Rights Reserved.</p>
                 <p>
                     Developed by{" "}
                     <a href="https://www.zscircle.tech" target="_blank" rel="noopener noreferrer" className="font-medium text-gray-700 hover:text-special-red">

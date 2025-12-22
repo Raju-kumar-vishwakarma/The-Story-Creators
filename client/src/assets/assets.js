@@ -1,5 +1,4 @@
-import logo from "../assets/logo.png";
-import ContactImage from "../assets/contactImg.png";	
+import logo from "../assets/logo.png";	
 import MenuIcon from "../assets/menu_icon.svg";
 import Carousel1 from "../assets/Carousel1.jpeg";
 import Carousel2 from "../assets/Carousel2.jpeg";
@@ -31,7 +30,6 @@ import Engagement3 from '../assets/Engagement3.jpeg';
 
 export const assets = {
   logo,
-  ContactImage,
   MenuIcon,
   Carousel1,
   Carousel2,
