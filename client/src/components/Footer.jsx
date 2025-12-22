@@ -38,34 +38,30 @@ const Footer = () => {
                 </div>
 
                 {/* Center Navigation */}
-                <div className="flex md:justify-around w-full itmems-start justify-start gap-30 md:gap-0">
-                    <div className="flex flex-col gap-x-10 gap-y-2 text-xl font-extralight">
-                    <h4 className="font-light">Quick Links</h4>
-                    <NavLink to="/" className="hover:underline">Home</NavLink>
-                 
-                 
-                    <NavLink to="/our-work" className="hover:underline">Our Work</NavLink>
-                    <NavLink to="/films" className="hover:underline">Films</NavLink>
-                       <NavLink to="/service" className="hover:underline">Service</NavLink>
-                    <NavLink to="/contact" className="hover:underline">Contact</NavLink>
-                       <NavLink to="/about-us" className="hover:underline">About Us</NavLink>
+                <div className="flex md:justify-around w-full itmems-start justify-start gap-20 md:gap-0">
+                    <div className="flex flex-col  gap-y-2 text-xl font-extralight text-nowrap">
+                        <h4 className="font-light">Quick Links</h4>
+                        <NavLink to="/" className="hover:underline text-gray-700">Home</NavLink>
+                        <NavLink to="/our-work" className="hover:underline text-gray-700">Our Work</NavLink>
+                        <NavLink to="/films" className="hover:underline text-gray-700">Films</NavLink>
+                        <NavLink to="/contact" className="hover:underline text-gray-700">Contact</NavLink>
+                        <NavLink to="/about-us" className="hover:underline text-gray-700">About Us</NavLink>
 
 
-                </div>
-                <div className="flex flex-col gap-x-10 gap-y-2 text-xl font-extralight">
-                    <h4 className="font-light">Services</h4>
-                    <NavLink to="/wedding" className="hover:underline">Wedding</NavLink>
-                    <NavLink to="/pre-wedding" className="hover:underline">Pre-Wedding</NavLink>
-                    <NavLink to="/engagement" className="hover:underline">Engagement</NavLink>
-                    <NavLink to="/films" className="hover:underline">Films</NavLink>
-                    <NavLink to="/career" className="hover:underline">Career</NavLink>
-                    <NavLink to="/events" className="hover:underline">Events</NavLink>
-                </div>
+                    </div>
+                    <div className="flex flex-col gap-x-10 gap-y-2 text-xl font-extralight text-nowrap">
+                        <h4 className="font-light">Services</h4>
+                        <NavLink to="/wedding" className="hover:underline text-gray-700">Wedding</NavLink>
+                        <NavLink to="/pre-wedding" className="hover:underline text-gray-700">Pre-Wedding</NavLink>
+                        <NavLink to="/engagement" className="hover:underline text-gray-700">Engagement</NavLink>
+                        <NavLink to="/films" className="hover:underline text-gray-700">Films</NavLink>
+                        <NavLink to="/events" className="hover:underline text-gray-700">Events</NavLink>
+                    </div>
                 </div>
 
 
                 {/* Social Links */}
-                <div className="space-y-4 text-2xl font-light leading-snug">
+                <div className="space-y-4 text-2xl font-light leading-snug ">
                     <h4>Follow Us</h4>
                     <div className="flex gap-6 text-gray-600 text-xl">
 

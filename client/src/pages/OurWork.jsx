@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { assets } from "../assets/assets";
 
 const OurWork = () => {
 	const [loadedImages, setLoadedImages] = useState({});
@@ -20,48 +21,49 @@ const OurWork = () => {
 		<div className="min-h-screen bg-white">
 
 			{/* Gallery Section */}
-			<section className="py-10 md:py-24 min-h-screen bg-white space-y-10 md:mt-10 mt-15">
+			<section className="w-full mb-15 py-10 md:py-10 min-h-screen bg-white space-y-10 mt-20">
 				<div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 					{/* Wedding Section */}
-					<div className="mb-16">
-						<h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">WEDDING</h2>
+					<div className="mb-16 mt-3">
+						<h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+						style={{ fontFamily: "'Great Vibes', cursive" }}
+						>Weeding</h2>
 
 						{/* Wedding Gallery Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-							{/* Karan & Khushali */}
+
 							<div className="group">
-								<a className="block">
+								<a href="#" className="block">
 									<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-										{!loadedImages['karan-khushali'] && <ImageLoader />}
+										{!loadedImages['#WEDDING'] && <ImageLoader />}
 										<img
-											src="https://mediaworkersfilms.com/wp-content/uploads/2024/02/Karan-Khusali1-1024x681.jpg"
-											alt="Karan & Khushali Wedding"
-											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['karan-khushali'] ? 'opacity-100' : 'opacity-0'}`}
+											src={assets.wedding1}
+											alt="#WEDDING"
+											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['#WEDDING'] ? 'opacity-100' : 'opacity-0'}`}
 											loading="lazy"
-											onLoad={() => handleImageLoad('karan-khushali')}
+											onLoad={() => handleImageLoad('#WEDDING')}
 										/>
 									</figure>
 									<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
-										Karan &amp; Khushali
+										{/* WEDDING */}
 									</h3>
 								</a>
 							</div>
 
-							{/* Neha & Vibhor */}
 							<div className="group">
-								<a className="block">
+								<a href="#" className="block">
 									<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-										{!loadedImages['neha-vibhor'] && <ImageLoader />}
+										{!loadedImages['#WEDDING'] && <ImageLoader />}
 										<img
-											src="https://mediaworkersfilms.com/wp-content/uploads/2024/02/Couple-Potrait-1024x681.jpg"
-											alt="Neha & Vibhor Wedding"
-											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['neha-vibhor'] ? 'opacity-100' : 'opacity-0'}`}
+											src={assets.wedding2}
+											alt="#WEDDING"
+											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['#WEDDING'] ? 'opacity-100' : 'opacity-0'}`}
 											loading="lazy"
-											onLoad={() => handleImageLoad('neha-vibhor')}
+											onLoad={() => handleImageLoad('#WEDDING')}
 										/>
 									</figure>
 									<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
-										Neha &amp; Vibhor
+										{/* WEDDING */}
 									</h3>
 								</a>
 							</div>
@@ -78,46 +80,50 @@ const OurWork = () => {
 						</div>
 					</div>
 
+
+
 					{/* Pre Wedding Section */}
 					<div className="mb-16">
-						<h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">PRE WEDDING</h2>
+						<h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+						style={{ fontFamily: "'Great Vibes', cursive" }}
+						>Pre Wedding</h2>
 
 						{/* Pre Wedding Gallery Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-							{/* Keshav & Priyeta */}
+
 							<div className="group">
-								<a  className="block">
+								<a href="#" className="block">
 									<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-										{!loadedImages['keshav-priyeta'] && <ImageLoader />}
+										{!loadedImages['#Pre Wedding'] && <ImageLoader />}
 										<img
-											src="https://mediaworkersfilms.com/wp-content/uploads/2024/02/RPR_8906-1024x681.jpg"
-											alt="Keshav & Priyeta Pre Wedding"
-											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['keshav-priyeta'] ? 'opacity-100' : 'opacity-0'}`}
+											src={assets.PreWedding1}
+											alt="#Pre Wedding"
+											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['#Pre Wedding'] ? 'opacity-100' : 'opacity-0'}`}
 											loading="lazy"
-											onLoad={() => handleImageLoad('keshav-priyeta')}
+											onLoad={() => handleImageLoad('#Pre Wedding')}
 										/>
 									</figure>
 									<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
-										Keshav &amp; Priyeta
+										{/* #Pre Wedding */}
 									</h3>
 								</a>
 							</div>
 
-							{/* Abhijeet & Shreya */}
+
 							<div className="group">
-								<a className="block">
+								<a href="#" className="block">
 									<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-										{!loadedImages['abhijeet-shreya'] && <ImageLoader />}
+										{!loadedImages['#Pre Wedding'] && <ImageLoader />}
 										<img
-											src="https://mediaworkersfilms.com/wp-content/uploads/2024/02/RPR_4386-1024x681.jpg"
-											alt="Abhijeet & Shreya Pre Wedding"
-											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['abhijeet-shreya'] ? 'opacity-100' : 'opacity-0'}`}
+											src={assets.PreWedding2}
+											alt="#Pre Wedding"
+											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['#Pre Wedding'] ? 'opacity-100' : 'opacity-0'}`}
 											loading="lazy"
-											onLoad={() => handleImageLoad('abhijeet-shreya')}
+											onLoad={() => handleImageLoad('#Pre Wedding')}
 										/>
 									</figure>
 									<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
-										Abhijeet &amp; Shreya
+										{/* #Pre Wedding */}
 									</h3>
 								</a>
 							</div>
@@ -136,25 +142,46 @@ const OurWork = () => {
 
 					{/* Engagement Section */}
 					<div className="mb-16">
-						<h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center">ENGAGEMENT</h2>
+						<h2 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+						style={{ fontFamily: "'Great Vibes', cursive" }}
+						>Engagement</h2>
 
 						{/* Engagement Gallery Grid */}
 						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-							{/* Priyank & Yamini */}
+
 							<div className="group">
-								<a  className="block">
+								<a href="#" className="block">
 									<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-										{!loadedImages['priyank-yamini'] && <ImageLoader />}
+										{!loadedImages['#Engagement'] && <ImageLoader />}
 										<img
-											src="https://mediaworkersfilms.com/wp-content/uploads/2024/02/Priyank-Yamini-1024x681.jpg"
-											alt="Priyank & Yamini Engagement"
-											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['priyank-yamini'] ? 'opacity-100' : 'opacity-0'}`}
+											src={assets.Engagement3}
+											alt="#Engagement"
+											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['#Engagement'] ? 'opacity-100' : 'opacity-0'}`}
 											loading="lazy"
-											onLoad={() => handleImageLoad('priyank-yamini')}
+											onLoad={() => handleImageLoad('#Engagement')}
 										/>
 									</figure>
 									<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
-										Priyank &amp; Yamini
+										{/* #Engagement */}
+									</h3>
+								</a>
+							</div>
+
+
+							<div className="group">
+								<a href="#" className="block">
+									<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
+										{!loadedImages['#Engagement'] && <ImageLoader />}
+										<img
+											src={assets.Engagement2}
+											alt="#Engagement"
+											className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages['#Engagement'] ? 'opacity-100' : 'opacity-0'}`}
+											loading="lazy"
+											onLoad={() => handleImageLoad('#Engagement')}
+										/>
+									</figure>
+									<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
+										{/* #Engagement */}
 									</h3>
 								</a>
 							</div>

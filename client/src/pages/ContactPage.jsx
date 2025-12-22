@@ -42,8 +42,10 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="container mx-auto px-4 md:px-12 mt-12 pb-12">
-            <h1 className="text-2xl text-center text-gray-500">
+        <div className="w-full px-4 sm:px-6 lg:px-12 py-10 min-h-screen bg-white mt-20">
+            <h1 className="text-3xl text-center text-gray-500"
+            style={{ fontFamily: "'Great Vibes', cursive" }}
+            >
                 Contact <span className="text-special-red">Us</span>
             </h1>
 
@@ -114,7 +116,7 @@ const ContactPage = () => {
 
                 <img
                     className="hidden md:block md:mr-16 mb-16 md:mt-10 max-h-96 object-contain rounded"
-                    src={assets.contact}
+                    src={assets.ContactImage}
                     alt="Contact Us"
                 />
             </div>

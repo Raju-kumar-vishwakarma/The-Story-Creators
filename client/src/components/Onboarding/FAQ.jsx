@@ -129,10 +129,10 @@ const FAQ = () => {
 				<div className="mb-6 md:mb-10">
 					<h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center"
 						style={{ fontFamily: "'Great Vibes', cursive" }}
-					>FAQ</h1>
+					>FAQ's</h1>
 				</div>
 
-				<div className="max-w-2xl mx-auto p-4 md:p-0 space-y-4 text-left">
+				<div className="max-w-2xl mx-auto p-1 md:p-0 space-y-4 text-left">
 					{faqItems.map((item, index) => {
 						const isOpen = openIndex === index;
 						return (
@@ -183,7 +183,7 @@ const FAQ = () => {
 						href="/service"
 						className="px-5 py-2 rounded-full border border-gray-300 bg-white hover:bg-gray-100 transition font-extralight"
 					>
-						See All
+						Explor Our Services
 					</a>
 				</div>
 			</div>

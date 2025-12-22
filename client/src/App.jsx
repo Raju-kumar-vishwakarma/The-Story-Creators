@@ -13,7 +13,6 @@ import ContactPage from './pages/ContactPage';
 import ChatBot from './components/ChatBot';
 import OurWork from './pages/OurWork';
 import Films from './pages/Films';
-import Service from './pages/Service';
 import AboutUs from './pages/AboutUs';
 
 const App = () => {
@@ -37,7 +36,6 @@ const App = () => {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/our-work' element={<OurWork/>} />
         <Route path='/films' element={<Films/>} />
-        <Route path='/service' element={<Service/>} />
         <Route path='/about-us' element={<AboutUs/>} />
       </Routes>
 

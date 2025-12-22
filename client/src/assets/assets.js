@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import ContactImage from "../assets/contactImg.png";	
 import MenuIcon from "../assets/menu_icon.svg";
 import Carousel1 from "../assets/Carousel1.jpeg";
 import Carousel2 from "../assets/Carousel2.jpeg";
@@ -16,9 +17,21 @@ import Gallery9 from '../assets/Gallery9.jpeg';
 import Gallery10  from '../assets/Gallery10.jpeg';
 import film1 from '../assets/film1.png';
 import film2 from '../assets/film2.png';
+import wedding1 from '../assets/wedding1.jpeg';
+import wedding2 from '../assets/wedding2.jpeg';
+import wedding3 from '../assets/wedding3.jpeg';
+import wedding4 from '../assets/wedding4.jpeg';
+import PreWedding1 from '../assets/PreWedding1.jpeg';
+import PreWedding2 from '../assets/PreWedding2.jpeg';
+import Engagement1 from '../assets/Engagement1.jpeg';
+import Engagement2 from '../assets/Engagement2.jpeg';
+import Engagement3 from '../assets/Engagement3.jpeg';
+
+
 
 export const assets = {
   logo,
+  ContactImage,
   MenuIcon,
   Carousel1,
   Carousel2,
@@ -34,13 +47,22 @@ export const assets = {
   Gallery8,
   Gallery9,
   Gallery10,
+  wedding1,
+  wedding2,
+  wedding3,
+  wedding4,
+  PreWedding1,
+  PreWedding2,
+  Engagement1,
+  Engagement2,
+  Engagement3,
 
 };
 
 export const images = [Carousel1, Carousel2, Carousel3, Carousel4];
 
 
-export const filmItems = [
+export const filmItems  = [
 	{
 		thumb: film1,
 		video: "https://www.youtube.com/shorts/s5n2muO4fcQ?feature=share",
@@ -58,10 +80,10 @@ export const photoItems = [
 	{ url: Gallery2, category: "engagement" },
 	{ url: Gallery7, category: "pre-wedding" },
 	{ url: Gallery8, category: "Haldi" },
-	// { url: Gallery3, category: "engagement" },
 	{ url: Gallery4, category: "pre-wedding" },
 	{ url: Gallery5, category: "engagement" },
 	{ url: Gallery6, category: "Haldi" },
 	{ url: Gallery9, category: "pre-wedding" },
 	{ url: Gallery10, category: "engagement" },
 ];
+

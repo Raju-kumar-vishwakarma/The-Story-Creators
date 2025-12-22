@@ -28,7 +28,6 @@ const Navbar = () => {
                 <NavLink to="/" style={getActivePage} className="nav-link hover:opacity-70 transition">Home</NavLink>
                 <NavLink to="/our-work" style={getActivePage} className="nav-link hover:opacity-70 transition">Our Work</NavLink>
                 <NavLink to="/films" style={getActivePage} className="nav-link hover:opacity-70 transition">Films</NavLink>
-                <NavLink to="/service" style={getActivePage} className="nav-link hover:opacity-70 transition">Service</NavLink>
                 <NavLink to="/contact" style={getActivePage} className="nav-link hover:opacity-70 transition">Contact</NavLink>
                 <NavLink to="/about-us" style={getActivePage} className="nav-link hover:opacity-70 transition">About</NavLink>
             </div>
@@ -60,7 +59,6 @@ const Navbar = () => {
                     <NavLink to="/" onClick={() => setOpen(false)} style={getActivePage} className="hover:opacity-70 transition ">Home</NavLink>
                     <NavLink to="/our-work" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition">Our Work</NavLink>
                     <NavLink to="/films" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition">Films</NavLink>
-                    <NavLink to="/service" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition">Service</NavLink>
                     <NavLink to="/contact" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition">Contact</NavLink>
                     <NavLink to="/about-us" onClick={() => setOpen(false)} style={getActivePage} className=" hover:opacity-70 transition ">About</NavLink>
                 </div>
