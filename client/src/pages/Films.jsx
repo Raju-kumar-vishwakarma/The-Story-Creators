@@ -18,12 +18,12 @@ const Films = () => {
 			: filmItems.filter((item) => item.category === activeCategory);
 
 	return (
-		<section className="w-full mb-15 py-10 md:py-16 min-h-screen bg-white space-y-10 mt-20 px-4 sm:px-6 lg:px-12">
+		<section className="w-full mb-15 pt-10 md:pt-16 min-h-screen bg-white space-y-10 mt-20 px-4 sm:px-6 lg:px-12">
 			<div className="mx-auto max-w-6xl">
 				{/* Heading */}
 				<div className="mb-8 md:mb-12 text-center">
 					<h1
-						className="text-3xl md:text-5xl font-semibold tracking-tight"
+						className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
 						style={{ fontFamily: "'Great Vibes', cursive" }}
 					>
 						Our Creativity
@@ -85,4 +85,3 @@ const Films = () => {
 };
 
 export default Films;
-

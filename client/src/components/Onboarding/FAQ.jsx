@@ -178,14 +178,14 @@ const FAQ = () => {
 						);
 					})}
 				</div>
-				<div className="mt-8 flex justify-center">
+				{/* <div className="mt-8 flex justify-center">
 					<a
 						href="/service"
 						className="px-5 py-2 rounded-full border border-gray-300 bg-white hover:bg-gray-100 transition font-extralight"
 					>
 						Explor Our Services
 					</a>
-				</div>
+				</div> */}
 			</div>
 		</section>
 	);

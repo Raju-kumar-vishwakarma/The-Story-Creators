@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
+import MainLoader from "../components/MainLoader";
 
 const categories = [
 	{
@@ -26,6 +27,13 @@ const categories = [
 			{ key: "Engagement2", src: "Engagement2" },
 		],
 	},
+	{
+		id: "haldi",
+		title: "Haldi",
+		images: [
+			{ key: "Haldi1", src: "Haldi1" },
+		],
+	},
 ];
 
 const OurWork = () => {
@@ -35,19 +43,12 @@ const OurWork = () => {
 		setLoadedImages(prev => ({ ...prev, [imageName]: true }));
 	};
 
-	const ImageLoader = () => (
-		<div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
-			<div className="flex flex-col items-center gap-2">
-				<div className="w-12 h-12 border-4 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
-				<p className="text-sm text-gray-500">Loading...</p>
-			</div>
-		</div>
-	);
+
 
 	return (
 		<div className="min-h-screen bg-white">
 			{/* Gallery Section */}
-			<section className="w-full mb-15 py-10 md:py-10 min-h-screen bg-white space-y-10 mt-20">
+			<section className="w-full pt-10 md:pt-16 min-h-screen bg-white space-y-10 mt-20">
 				<div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 					{/* Map through all categories */}
 					{categories.map((category) => (
@@ -65,7 +66,7 @@ const OurWork = () => {
 									<div key={image.key} className="group">
 										<a href="#" className="block">
 											<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-												{!loadedImages[image.key] && <ImageLoader />}
+												{!loadedImages[image.key] && <MainLoader />}
 												<img
 													src={assets[image.src]}
 													alt={category.title}
@@ -85,7 +86,7 @@ const OurWork = () => {
 							{/* See All Button */}
 							<div className="mt-8 flex justify-center">
 								<a
-									href="/"
+									href={`/${category.id}`}
 									className="px-5 py-2 rounded-full border border-gray-300 bg-white hover:bg-gray-100 transition"
 								>
 									See All

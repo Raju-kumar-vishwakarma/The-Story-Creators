@@ -2,10 +2,13 @@ import React from 'react'
 
 const MainLoader = () => {
   return (
-    <div className="flex justify-center items-center gap-2 w-full mx-auto ">
-      <div className="h-14 w-14 border border-special-red border-t-transparent rounded-full animate-spin"></div>
-    </div>
+     <div className="absolute  inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+            <div className="flex flex-col items-center ">
+                <div className="w-12 h-12 border-2 border-gray-300 border-t-gray-600 rounded-full animate-spin"></div>
+
+            </div>
+        </div>
   )
 }
 
-export default MainLoader
+export default MainLoader;

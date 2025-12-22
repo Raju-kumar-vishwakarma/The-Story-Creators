@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { toast } from 'sonner';
 import { useAppContext } from "../context/AppContext";
-import { assets } from "../assets/assets";
 import ButtonLoader from "../components/ButtonLoader";
 
 const ContactPage = () => {
@@ -42,12 +41,10 @@ const ContactPage = () => {
     };
 
     return (
-        <div className="w-full px-4 sm:px-6 lg:px-12 py-10 min-h-screen bg-white mt-20">
-            <h1 className="text-3xl text-center text-gray-500"
-            style={{ fontFamily: "'Great Vibes', cursive" }}
-            >
-                Contact <span className="text-special-red">Us</span>
-            </h1>
+        <div className="w-full px-4 sm:px-6 py-10 md:py-16 min-h-screen bg-white mt-20">
+            <h1 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+						    style={{ fontFamily: "'Great Vibes', cursive" }}
+		    >Contact Us</h1>
 
             <div className="flex flex-col-reverse md:flex-row justify-center gap-20 mt-4 md:mt-10">
                 <div className="flex-1 max-w-md">
@@ -100,17 +97,19 @@ const ContactPage = () => {
                             required
                         ></textarea>
 
-                        <button
-                            type="submit"
-                            disabled={loading}
-                            className={`w-full mt-6 text-white py-3 uppercase transition rounded ${
-                                loading
-                                    ? "bg-special-red/60 cursor-not-allowed"
-                                    : "bg-special-red/90 hover:bg-special-red cursor-pointer"
-                            }`}
-                        >
-                            {loading ? <ButtonLoader/> : "Submit"}
-                        </button>
+                        <div className="flex justify-center">
+                            <button
+                                type="submit"
+                                disabled={loading}
+                                className={`rounded-full px-6 py-2.5 text-sm md:text-base font-semibold text-white transition-all duration-300 transform ${
+                                    loading
+                                        ? "bg-primary-red/60 cursor-not-allowed scale-95 opacity-75"
+                                        : "bg-black/80 hover:bg-primary-red hover:scale-105 active:scale-95 cursor-pointer shadow-md hover:shadow-lg"
+                                }`}
+                            >
+                                {loading ? <ButtonLoader/> : "Submit"}
+                            </button>
+                        </div>
                     </form>
                 </div>
 {/* 

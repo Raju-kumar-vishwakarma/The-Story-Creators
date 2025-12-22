@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { assets } from "../assets/assets";
+
 const Navbar = () => {
     const [open, setOpen] = useState(false);
 
     const getActivePage = ({ isActive }) => ({
         color: isActive ? "#C23700" : "#000",
     });
+
 
 
     return (
@@ -25,11 +27,11 @@ const Navbar = () => {
 
             <div className="hidden md:flex items-center gap-8 text-nowrap text-lg font-extralight ">
 
-                <NavLink to="/" style={getActivePage} className="nav-link hover:opacity-70 transition">Home</NavLink>
-                <NavLink to="/our-work" style={getActivePage} className="nav-link hover:opacity-70 transition">Our Work</NavLink>
-                <NavLink to="/films" style={getActivePage} className="nav-link hover:opacity-70 transition">Films</NavLink>
-                <NavLink to="/contact" style={getActivePage} className="nav-link hover:opacity-70 transition">Contact</NavLink>
-                <NavLink to="/about-us" style={getActivePage} className="nav-link hover:opacity-70 transition">About</NavLink>
+                <NavLink to="/" onClick={scrollTo(0,0)} style={getActivePage} className="nav-link hover:opacity-70 transition">Home</NavLink>
+                <NavLink to="/our-work" onClick={scrollTo(0,0)} style={getActivePage} className="nav-link hover:opacity-70 transition">Our Work</NavLink>
+                <NavLink to="/films" onClick={scrollTo(0,0)} style={getActivePage} className="nav-link hover:opacity-70 transition">Films</NavLink>
+                <NavLink to="/contact" onClick={scrollTo(0,0)} style={getActivePage} className="nav-link hover:opacity-70 transition">Contact</NavLink>
+                <NavLink to="/about-us" onClick={scrollTo(0,0)} style={getActivePage} className="nav-link hover:opacity-70 transition">About</NavLink>
             </div>
 
             <div className="flex items-center gap-6 md:hidden">
