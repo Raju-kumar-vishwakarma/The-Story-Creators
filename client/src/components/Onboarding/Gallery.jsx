@@ -136,7 +136,7 @@ const Gallery = () => {
 			<div className="  px-3 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 				<div className="mb-6 md:mb-10">
 					<h1 className="text-3xl md:text-6xl font-semibold tracking-tight text-center"
-						style={{ fontFamily: "'Great Vibes', cursive" }}
+						style={{ fontFamily: "'Playfair Display', serif" }}
 					>Gallery</h1>
 				</div>
 
@@ -163,7 +163,7 @@ const Gallery = () => {
 
 				<div className="mt-14 mb-4">
 					<h2 className="text-3xl md:text-6xl font-semibold tracking-tight text-center"
-						style={{ fontFamily: "'Great Vibes', cursive" }}
+						style={{ fontFamily: "'Playfair Display', serif" }}
 					>Films</h2>
 				</div>
 

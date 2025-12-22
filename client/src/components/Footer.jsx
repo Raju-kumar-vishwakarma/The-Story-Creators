@@ -2,6 +2,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import React, { useEffect, useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
+import { MapPin } from "lucide-react";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -10,29 +11,52 @@ const Footer = () => {
         <footer className="container mx-auto border-t border-gray-200">
             <div className="w-full p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-10 text-gray-800">
                 {/* Left Section */}
-                <div className="space-y-6 md:space-y-12 max-w-xl w-full md:w-auto">
-                    <div className="space-y-3">
+                <div className="space-y-6 max-w-xl w-full md:w-auto">
+                    <div className="space-y-3 ">
                         <NavLink to="/" aria-label="Home" className="flex items-center gap-2 md:gap-3">
                             <img src={assets.logo} alt="Logo" className="h-12 w-12 md:h-15 md:w-15 object-contain" />
                             <h1
                                 className="text-2xl sm:text-3xl md:text-4xl text-black mt-2 whitespace-nowrap"
-                                style={{ fontFamily: "'Great Vibes', cursive" }}
+                                style={{ fontFamily: "'Playfair Display', serif" }}
                             >
                                 The Story Creators
                             </h1>
                         </NavLink>
-                        <h2 className="text-base sm:text-lg md:text-xl font-extralight leading-snug">
+                        <h2 className="text-base md:text-lg font-extralight leading-snug">
                             EVERY MOMENT TELLS A STORY-LET'S SAVE YOURS.
                         </h2>
+                        <div className="flex flex-row gap-4 mt-6">
+                            <div className="">
+                                <a
+                                    href="https://wa.me/919131628219"
+                                    className="inline-flex items-center justify-center rounded-full hover:bg-black text-white px-7 py-3 text-sm font-light bg-primary-red/60   hover:scale-105 transition-all duration-300"
+                                >
+                                    Book Now
+                                </a>
+                            </div>
+                            <div>
+                                <a
+                                    href="https://maps.google.com/maps?q=Street+No.4,+Mahadev+Ghat,+Tiranga+Chouk,+Raipur"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center px-7 py-2.5 border border-gray-300 bg-white hover:bg-gray-100 text-sm font-light rounded-full hover:scale-105 transition-all duration-300"
+                                >
+                                    <img src={assets.googleMapIcon} alt="Google Map" className="h-6 w-6 mr-2" />
+                                    Find Us
+                                </a>
+                            </div>
+
+
+                        </div>
                     </div>
-                    <div className="space-y-3 text-sm sm:text-base">
+                    <div className="space-y-3 text-base sm:text-xl md:text-lg font-extralight">
                         <div className="font-light leading-snug">
                             <h2>Office:</h2>
-                            <p className="font-extralight">Street No.4, Mahadev Ghat, Tiranga Chouk, Raipur</p>
+                            <p className="font-extralight ">Street No.4, Mahadev Ghat, Tiranga Chouk, Raipur</p>
                         </div>
                         <div className="font-light leading-snug">
                             <h2>Phone:</h2>
-                           <p className="font-extralight">+91 91316 28219, +91 81095 19281</p>
+                            <p className="font-extralight">+91 91316 28219, +91 81095 19281</p>
                         </div>
                         <div className="font-light leading-snug">
                             <h2>Email:</h2>
@@ -42,7 +66,7 @@ const Footer = () => {
                 </div>
 
                 {/* Center Navigation */}
-                <div className="flex flex-row md:justify-around w-full items-start justify-start gap-22 sm:gap-12 md:gap-0 ">
+                <div className="flex flex-row md:justify-around w-full items-start justify-start gap-20 md:gap-0 ">
                     <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight ">
                         <h4 className="font-light mb-1">Quick Links</h4>
                         <NavLink to="/" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Home</NavLink>
@@ -50,7 +74,6 @@ const Footer = () => {
                         <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
                         <NavLink to="/contact" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Contact</NavLink>
                         <NavLink to="/about-us" className="hover:underline text-gray-700 transition-all hover:animate-pulse">About Us</NavLink>
-                        <a href="https://wa.me/919131628219" target="_blank" rel="noopener noreferrer" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Book Now</a>
                     </div>
                     <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight">
                         <h4 className="font-light mb-1">Services</h4>
@@ -65,7 +88,6 @@ const Footer = () => {
                 {/* Social Links */}
                 <div className="space-y-4 text-xl sm:text-2xl font-light leading-snug w-full md:w-auto">
                     <h4>Follow Us</h4>
-                    <p className="font-light md:text-xl text-sm">The Story Creators</p>
                     <div className="flex gap-4 sm:gap-6 text-gray-600">
                         <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:text-blue-600">
                             <Facebook size={20} className="sm:w-6 sm:h-6" />
@@ -84,11 +106,11 @@ const Footer = () => {
             </div>
 
             {/* Bottom Bar */}
-            <div className="border-t border-gray-100 py-4 md:py-6 px-4 md:px-0 text-center text-xs sm:text-sm text-gray-500 space-y-2">
-                <p className="leading-relaxed">Copyright © {currentYear} TheStoryCreators – All Rights Reserved.</p>
+            <div className="border-t border-gray-100 py-4 md:py-6 px-4 md:px-0 text-center text-sm md:text-lg text-gray-500 space-y-2 font-extralight">
+                <p className="leading-relaxed ">Copyright © {currentYear} <span className="text-black font-normal ">TheStoryCreators</span> – All Rights Reserved.</p>
                 <p className="leading-relaxed">
                     Developed by{" "}
-                    <a href="https://www.zscircle.tech" target="_blank" rel="noopener noreferrer" className="font-medium text-gray-700 hover:text-special-red transition-colors">
+                    <a href="https://www.zscircle.tech" target="_blank" rel="noopener noreferrer" className=" hover:text-special-red transition-colors font-extralight text-primary-red">
                         Team ZSCircle
                     </a>
                 </p>

@@ -101,19 +101,7 @@ const faqItems = [
 				<li>UPI</li>
 			</ul>
 		),
-	},
-	{
-		question: "8. What is the % advance amount to confirm the booking?",
-		answer: <p>50%</p>,
-	},
-	{
-		question: "9. What is your cancellation policy?",
-		answer: <p>Please connect to discuss.</p>,
-	},
-	{
-		question: "10. How to book he Story Creators?",
-		answer: <p>For booking us, call at +91 91316 28219 / +91 81095 19281.</p>,
-	},
+	}
 ];
 
 const FAQ = () => {
@@ -128,8 +116,8 @@ const FAQ = () => {
 			<div className="mx-auto max-w-5xl space-y-8">
 				<div className="mb-6 md:mb-10">
 					<h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center"
-						style={{ fontFamily: "'Great Vibes', cursive" }}
-					>FAQ's</h1>
+						style={{ fontFamily: "'Playfair Display', serif" }}
+					>FAQ'S</h1>
 				</div>
 
 				<div className="max-w-2xl mx-auto p-1 md:p-0 space-y-4 text-left">

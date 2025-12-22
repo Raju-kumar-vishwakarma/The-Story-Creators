@@ -1,15 +1,7 @@
 import React, { useState } from "react";
-import { assets } from "../assets/assets";
+import { assets, weddingImages } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
 
-const weddingImages = [
-    { key: "wedding1", src: "wedding1" },
-    { key: "wedding2", src: "wedding2" },
-    { key: "wedding3", src: "wedding3" },
-    { key: "wedding4", src: "wedding4" },
-    { key: "wedding5", src: "wedding5" },
-    { key: "wedding6", src: "wedding6" },
-];
 
 const Weeding = () => {
     const [loadedImages, setLoadedImages] = useState({});
@@ -28,7 +20,7 @@ const Weeding = () => {
                     <div className="mb-16">
                         <h2
                             className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
-                            style={{ fontFamily: "'Great Vibes', cursive" }}
+                            style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             Wedding Gallery
                         </h2>

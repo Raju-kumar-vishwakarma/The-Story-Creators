@@ -21,7 +21,7 @@ const Haldi = () => {
                     <div className="mb-16">
                         <h2
                             className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
-                            style={{ fontFamily: "'Great Vibes', cursive" }}
+                            style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             Haldi Gallery
                         </h2>

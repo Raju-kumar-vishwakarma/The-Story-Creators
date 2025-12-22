@@ -24,7 +24,7 @@ const Films = () => {
 				<div className="mb-8 md:mb-12 text-center">
 					<h1
 						className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
-						style={{ fontFamily: "'Great Vibes', cursive" }}
+						style={{ fontFamily: "'Playfair Display', serif" }}
 					>
 						Our Creativity
 					</h1>

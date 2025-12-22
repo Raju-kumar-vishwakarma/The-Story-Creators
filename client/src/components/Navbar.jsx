@@ -19,7 +19,7 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" className="h-15 w-15 object-contain " />
                 <h1
                     className="hidden sm:block text-2xl sm:text-3xl md:text-4xl text-black mt-2"
-                    style={{ fontFamily: "'Great Vibes', cursive" }}
+                    style={{ fontFamily: "'Georgia', serif" }}
                 >
                     The Story <span className="text-special-red">Creators</span>
                 </h1>

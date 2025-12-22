@@ -43,7 +43,7 @@ const ContactPage = () => {
     return (
         <div className="w-full px-4 sm:px-6 pt-10 md:pt-16 min-h-screen bg-white mt-20">
             <h1 className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
-						    style={{ fontFamily: "'Great Vibes', cursive" }}
+						    style={{ fontFamily: "'Playfair Display', serif" }}
 		    >Contact Us</h1>
 
             <div className="flex flex-col-reverse md:flex-row justify-center gap-20 mt-4 md:mt-10">

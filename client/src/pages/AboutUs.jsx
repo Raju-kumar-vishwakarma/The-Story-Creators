@@ -8,7 +8,7 @@ const AboutUs = () => {
                 <div className="mx-auto max-w-6xl text-center space-y-4">
                     <h1
                         className="text-3xl md:text-4xl font-bold text-black"
-                        style={{ fontFamily: "'Great Vibes', cursive" }}
+                        style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                         About Us
                     </h1>

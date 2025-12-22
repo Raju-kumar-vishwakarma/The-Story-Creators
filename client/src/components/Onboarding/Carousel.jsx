@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { images } from "../../assets/assets";
+import BookingModal from "../BookingModal";
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   const goTo = (index) => setCurrent(index);
   const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
@@ -29,7 +31,7 @@ const Carousel = () => {
           <div className="max-w-3xl text-white space-y-4">
 
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight"
-            style={{ fontFamily: "'Great Vibes', cursive" }}
+            style={{ fontFamily: "'Playfair Display', serif" }}
             >
               The Story Creators
             </h1>
@@ -45,12 +47,12 @@ const Carousel = () => {
               <span className="h-[0.5px] w-28 bg-white/80" />
             </div>
             <div className="pt-2">
-              <a
-                 href="https://wa.me/919131628219"
-                className="inline-flex items-center justify-center rounded-full hover:bg-white text-white px-7 py-2.5 text-sm font-light bg-primary-red/50 hover:text-black  hover:scale-105 transition-all duration-300"
+              <button
+                onClick={() => setIsBookingOpen(true)}
+                className="inline-flex items-center justify-center rounded-full hover:bg-white text-white px-7 py-2.5 text-sm font-light bg-primary-red/60 hover:text-black hover:scale-105 transition-all duration-300"
               >
                 Book Now
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -81,6 +83,9 @@ const Carousel = () => {
           />
         </svg>
       </div>
+
+      {/* Booking Modal */}
+      <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </section>
   );
 };
