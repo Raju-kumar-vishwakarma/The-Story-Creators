@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
+import ImageViewer from "../components/ImageViewer";
 
 const categories = [
 	{
@@ -39,9 +40,33 @@ const categories = [
 
 const OurWork = () => {
 	const [loadedImages, setLoadedImages] = useState({});
+	const [isViewerOpen, setIsViewerOpen] = useState(false);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
+	const [currentCategoryId, setCurrentCategoryId] = useState(null);
 
 	const handleImageLoad = (imageName) => {
 		setLoadedImages(prev => ({ ...prev, [imageName]: true }));
+	};
+
+	const handleImageClick = (categoryId, index) => {
+		setCurrentCategoryId(categoryId);
+		setCurrentImageIndex(index);
+		setIsViewerOpen(true);
+	};
+
+	const getImagesForCategory = (categoryId) => {
+		const category = categories.find(cat => cat.id === categoryId);
+		return category ? category.images.map(img => assets[img.src]) : [];
+	};
+
+	const handlePrev = () => {
+		const images = getImagesForCategory(currentCategoryId);
+		setCurrentImageIndex(prev => (prev === 0 ? images.length - 1 : prev - 1));
+	};
+
+	const handleNext = () => {
+		const images = getImagesForCategory(currentCategoryId);
+		setCurrentImageIndex(prev => (prev === images.length - 1 ? 0 : prev + 1));
 	};
 
 
@@ -63,9 +88,9 @@ const OurWork = () => {
 
 							{/* Gallery Grid */}
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-								{category.images.map((image) => (
-									<div key={image.key} className="group">
-										<a href="#" className="block">
+								{category.images.map((image, index) => (
+									<div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(category.id, index)}>
+										<div className="block">
 											<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
 												{!loadedImages[image.key] && <MainLoader />}
 												<img
@@ -79,7 +104,7 @@ const OurWork = () => {
 											<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
 												{/* Category Title */}
 											</h3>
-										</a>
+										</div>
 									</div>
 								))}
 							</div>
@@ -96,6 +121,14 @@ const OurWork = () => {
 						</div>
 					))}
 				</div>
+				<ImageViewer
+					isOpen={isViewerOpen}
+					imageIndex={currentImageIndex}
+					images={getImagesForCategory(currentCategoryId)}
+					onClose={() => setIsViewerOpen(false)}
+					onPrev={handlePrev}
+					onNext={handleNext}
+				/>
 			</section>
 		</div>
 	);

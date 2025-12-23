@@ -1,13 +1,30 @@
 import React, { useState } from "react";
 import { assets, engagementImages } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
+import ImageViewer from "../components/ImageViewer";
 
 
 const Engagement = () => {
     const [loadedImages, setLoadedImages] = useState({});
+    const [isViewerOpen, setIsViewerOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const imageUrls = engagementImages.map(img => assets[img.src]);
 
     const handleImageLoad = (imageName) => {
         setLoadedImages(prev => ({ ...prev, [imageName]: true }));
+    };
+
+    const handleImageClick = (index) => {
+        setCurrentImageIndex(index);
+        setIsViewerOpen(true);
+    };
+
+    const handlePrev = () => {
+        setCurrentImageIndex(prev => (prev === 0 ? imageUrls.length - 1 : prev - 1));
+    };
+
+    const handleNext = () => {
+        setCurrentImageIndex(prev => (prev === imageUrls.length - 1 ? 0 : prev + 1));
     };
 
 
@@ -26,8 +43,8 @@ const Engagement = () => {
 
                         {/* Gallery Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                            {engagementImages.map((image) => (
-                                <div key={image.key} className="group">
+                            {engagementImages.map((image, index) => (
+                                <div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(index)}>
                                     <div className="block">
                                         <figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100 aspect-[4/3]">
                                             {!loadedImages[image.key] && <MainLoader />}
@@ -45,6 +62,14 @@ const Engagement = () => {
                         </div>
                     </div>
                 </div>
+                <ImageViewer
+                    isOpen={isViewerOpen}
+                    imageIndex={currentImageIndex}
+                    images={imageUrls}
+                    onClose={() => setIsViewerOpen(false)}
+                    onPrev={handlePrev}
+                    onNext={handleNext}
+                />
             </section>
         </div>
     );

@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { filmItems, photoItems } from "../../assets/assets";
+import ImageViewer from "../ImageViewer";
 const Filters = ({ active, onChange, options }) => (
 	<div className="w-full flex items-center justify-center gap-3 flex-wrap">
 		{options.map((opt) => (
@@ -19,13 +20,14 @@ const Filters = ({ active, onChange, options }) => (
 
 const animationVariants = ["fade-in", "fade-right", "zoom-in", "fade-left", "fade-down"];
 
-const PhotoGrid = ({ items, animationKey }) => (
+const PhotoGrid = ({ items, animationKey, onImageClick }) => (
 	<div className="columns-2 sm:columns-2 lg:columns-3 gap-5 [column-fill:balance]">
 		{items.map((it, idx) => (
 			<div
 				key={`${animationKey}-${idx}-${it.url}`}
 				className={`mb-5 break-inside-avoid overflow-hidden rounded-2xl cursor-pointer  shadow-[0_22px_55px_-28px_rgba(0,0,0,0.45)] ${animationVariants[idx % animationVariants.length]}`}
 				style={{ animationDelay: `${(idx % animationVariants.length) * 80}ms` }}
+				onClick={() => onImageClick(idx)}
 			>
 				<img
 					src={it.url}
@@ -74,6 +76,8 @@ const Gallery = () => {
 	const [photoFilter, setPhotoFilter] = useState("all");
 	const [filmFilter, setFilmFilter] = useState("all");
 	const [hasEntered, setHasEntered] = useState(false);
+	const [isViewerOpen, setIsViewerOpen] = useState(false);
+	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 	const sectionRef = useRef(null);
 
 	useEffect(() => {
@@ -126,6 +130,21 @@ const Gallery = () => {
 		[filmFilter]
 	);
 
+	const imageUrls = useMemo(() => filteredPhotos.map(item => item.url), [filteredPhotos]);
+
+	const handleImageClick = (index) => {
+		setCurrentImageIndex(index);
+		setIsViewerOpen(true);
+	};
+
+	const handlePrev = () => {
+		setCurrentImageIndex(prev => (prev === 0 ? imageUrls.length - 1 : prev - 1));
+	};
+
+	const handleNext = () => {
+		setCurrentImageIndex(prev => (prev === imageUrls.length - 1 ? 0 : prev + 1));
+	};
+
 	return (
 		<section
 			ref={sectionRef}
@@ -145,12 +164,12 @@ const Gallery = () => {
 				</div>
 
 				{hasEntered ? (
-					<PhotoGrid items={filteredPhotos} animationKey={photoFilter} />
-				) : (
-					<div className="grid place-items-center py-10 text-gray-500 text-sm">
-						<p>Scroll to load gallery…</p>
-					</div>
-				)}
+				<PhotoGrid items={filteredPhotos} animationKey={photoFilter} onImageClick={handleImageClick} />
+			) : (
+				<div className="grid place-items-center py-10 text-gray-500 text-sm">
+					<p>Scroll to load gallery…</p>
+				</div>
+			)}
 
 				<div className="mt-8 flex justify-center">
 					<a
@@ -187,6 +206,15 @@ const Gallery = () => {
 						See All
 					</a>
 				</div>
+
+				<ImageViewer
+					isOpen={isViewerOpen}
+					imageIndex={currentImageIndex}
+					images={imageUrls}
+					onClose={() => setIsViewerOpen(false)}
+					onPrev={handlePrev}
+					onNext={handleNext}
+				/>
 			</div>
 		</section>
 	);

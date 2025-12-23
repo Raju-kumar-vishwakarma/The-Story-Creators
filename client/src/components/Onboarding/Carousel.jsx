@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { images } from "../../assets/assets";
 import BookingModal from "../BookingModal";
+import ImageViewer from "../ImageViewer";
 
 const Carousel = () => {
   const [current, setCurrent] = useState(0);
   const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const [isImageViewerOpen, setIsImageViewerOpen] = useState(false);
 
   const goTo = (index) => setCurrent(index);
   const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
@@ -23,7 +25,8 @@ const Carousel = () => {
         <img
           src={images[current]}
           alt={`Slide ${current + 1}`}
-          className="block w-full min-h-[60vh] md:h-full object-cover transition-transform duration-2000 ease-out brightness-75"
+          onClick={() => setIsImageViewerOpen(true)}
+          className="block w-full min-h-[60vh] md:h-full object-cover transition-transform duration-2000 ease-out brightness-75 cursor-pointer hover:brightness-50"
           style={{ transform: "scale(1.09)" }}
         />
         
@@ -36,7 +39,7 @@ const Carousel = () => {
               The Story Creators
             </h1>
             <div className="flex justify-center">
-              <span className="h-[0.5px] w-28 bg-white/80" />
+              <span className="h-[0.5px] w-28 bg-white/80 rounded-full" />
             </div>
             <p className="text-lg md:text-xl font-extralight uppercase tracking-wider text-gray-100 "
             
@@ -44,7 +47,7 @@ const Carousel = () => {
               EVERY MOMENT TELLS A STORY-LET'S SAVE YOURS.
             </p>
             <div className="flex justify-center">
-              <span className="h-[0.5px] w-28 bg-white/80" />
+              <span className="h-[0.5px] w-28 bg-white/80 rounded-full" />
             </div>
             <div className="pt-2">
               <button
@@ -54,6 +57,20 @@ const Carousel = () => {
                 Book Now
               </button>
             </div>
+
+            
+            {/* <div className="flex justify-center gap-2 pt-4">
+              {images.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => goTo(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    index === current ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div> */}
           </div>
         </div>
 
@@ -85,6 +102,16 @@ const Carousel = () => {
       </div>
 
       {/* Booking Modal */}
+
+      {/* Image Viewer */}
+      <ImageViewer
+        isOpen={isImageViewerOpen}
+        imageIndex={current}
+        images={images}
+        onClose={() => setIsImageViewerOpen(false)}
+        onPrev={prev}
+        onNext={next}
+      />
       <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </section>
   );
