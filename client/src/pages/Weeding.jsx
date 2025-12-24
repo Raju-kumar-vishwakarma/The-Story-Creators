@@ -47,7 +47,7 @@ const Weeding = () => {
                             {weddingImages.map((image, index) => (
                                 <div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(index)}>
                                     <div className="block">
-                                        <figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100 aspect-[4/3]">
+                                        <figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100 aspect-4/3">
                                             {!loadedImages[image.key] && <MainLoader />}
                                             <img
                                                 src={assets[image.src]}

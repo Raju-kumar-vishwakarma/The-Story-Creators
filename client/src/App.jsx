@@ -19,6 +19,8 @@ import PreWedding from './pages/PreWedding';
 import Engagement from './pages/Engagement';
 import Haldi from './pages/Haldi';
 import SocialButtons from './components/SocialButtons';
+import Birthday from './pages/Birthday';
+import Maternity from './pages/Maternity';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -48,6 +50,9 @@ const App = () => {
         <Route path='/pre-wedding' element={<PreWedding/>} />
         <Route path='/engagement' element={<Engagement/>} />
         <Route path='/haldi' element={<Haldi/>} />
+        <Route path='/birthday' element={<Birthday/>} />
+        <Route path='/maternity' element={<Maternity/>} />
+
 
       </Routes>
 

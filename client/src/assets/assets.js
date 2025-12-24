@@ -23,6 +23,8 @@ import gallery12 from "../assets/gallery/gallery12.jpg";
 
 import film1 from "../assets/films/film1.png";
 import film2 from "../assets/films/film2.png";
+import film3 from "../assets/films/film3.png";
+
 
 import wedding1 from "../assets/wedding/wedding1.jpeg";
 import wedding2 from "../assets/wedding/wedding2.jpeg";
@@ -92,6 +94,26 @@ import haldi7 from "../assets/haldi/haldi7.jpeg";
 import haldi8 from "../assets/haldi/haldi8.jpeg";
 import haldi9 from "../assets/haldi/haldi9.jpeg";
 import haldi10 from "../assets/haldi/haldi10.jpeg";
+import birthday1 from "../assets/birthday/bday1.jpg";
+import birthday2 from "../assets/birthday/bday2.jpg";
+import birthday3 from "../assets/birthday/bday3.jpg";
+import birthday4 from "../assets/birthday/bday4.jpg";
+import birthday5 from "../assets/birthday/bday5.jpg";
+import birthday6 from "../assets/birthday/bday6.jpg";
+import birthday7 from "../assets/birthday/bday7.jpg";
+import birthday8 from "../assets/birthday/bday8.jpg";
+import birthday9 from "../assets/birthday/bday9.jpg";
+import birthday10 from "../assets/birthday/bday10.jpg";
+
+
+import maternity1 from "../assets/maternity/img1.jpeg";
+import maternity2 from "../assets/maternity/img2.jpeg";
+import maternity3 from "../assets/maternity/img3.jpeg";
+import maternity4 from "../assets/maternity/img4.jpeg";
+import maternity5 from "../assets/maternity/img5.jpeg";
+import maternity6 from "../assets/maternity/img6.jpeg";
+import maternity7 from "../assets/maternity/img7.jpeg";
+
 
 export const assets = {
   logo,
@@ -182,6 +204,25 @@ export const assets = {
   haldi8,
   haldi9,
   haldi10,
+
+  birthday1,
+  birthday2,
+  birthday3,
+  birthday4,
+  birthday5,
+  birthday6,
+  birthday7,
+  birthday8,
+  birthday9,
+  birthday10,
+
+  maternity1,
+  maternity2,
+  maternity3,
+  maternity4,
+  maternity5,
+  maternity6,
+  maternity7,
 };
 
 export const images = [carousel1, carousel2, carousel3, carousel4, carousel5];
@@ -197,6 +238,11 @@ export const filmItems = [
     video: "https://www.youtube.com/shorts/0NYBTrGKvW0?feature=share",
     category: "wedding",
   },
+  {
+    thumb: film3,
+    video: "https://youtube.com/shorts/fRvoxTdejzI?si=Un0VbvCdcE3r7Tx1",
+    category: "wedding",
+  },
 ];
 
 export const photoItems = [
@@ -205,12 +251,19 @@ export const photoItems = [
   { url: gallery7, category: "pre-wedding" },
   { url: gallery8, category: "haldi" },
   { url: gallery12, category: "wedding" },
-  { url: gallery4, category: "pre-wedding" },
+  // { url: gallery4, category: "pre-wedding" },
   { url: gallery9, category: "pre-wedding" },
   { url: gallery5, category: "engagement" },
   { url: gallery10, category: "engagement" },
   { url: gallery6, category: "haldi" },
   { url: gallery11, category: "wedding" },
+  // Birthday
+  { url: birthday1, category: "birthday" },
+  { url: birthday2, category: "birthday" },
+  { url: maternity1, category: "maternity" },
+  { url: maternity4, category: "maternity" },
+
+
 ];
 
 export const weddingImages = [
@@ -236,7 +289,7 @@ export const weddingImages = [
     { key: "wedding20", src: "wedding20" },
     { key: "wedding21", src: "wedding21" },
     { key: "wedding22", src: "wedding22" },
-    
+
 ];
 
 export const haldiImages = [
@@ -252,13 +305,23 @@ export const haldiImages = [
   { key: "Haldi10", src: "haldi10" },
 ];
 
-const preWeddingImages = [
+export const preWeddingImages = [
   { key: "PreWedding1", src: "prewedding1" },
   { key: "PreWedding2", src: "prewedding2" },
   { key: "PreWedding3", src: "prewedding3" },
   { key: "PreWedding4", src: "prewedding4" },
   { key: "PreWedding5", src: "prewedding5" },
   { key: "PreWedding6", src: "prewedding6" },
+  { key: "PreWedding7", src: "prewedding7" },
+    { key: "PreWedding8", src: "prewedding8" },
+    { key: "PreWedding9", src: "prewedding9" },
+    { key: "PreWedding10", src: "prewedding10" },
+    { key: "PreWedding11", src: "prewedding11" },
+    { key: "PreWedding12", src: "prewedding12" },
+    { key: "PreWedding13", src: "prewedding13" },
+    { key: "PreWedding14", src: "prewedding14" },
+    { key: "PreWedding15", src: "prewedding15" },
+
 ];
 
 export const engagementImages = [
@@ -280,4 +343,29 @@ export const engagementImages = [
   { key: "Engagement18", src: "engagement18" },
   { key: "Engagement19", src: "engagement19" },
   { key: "Engagement20", src: "engagement20" },
+];
+
+export const birthdayImages = [
+  // Add birthday images here when you upload them
+  // Example:
+  { key: "Birthday1", src: "birthday1" },
+  { key: "Birthday2", src: "birthday2" },
+  { key: "Birthday3", src: "birthday3" },
+  { key: "Birthday4", src: "birthday4" },
+  { key: "Birthday5", src: "birthday5" },
+  { key: "Birthday6", src: "birthday6" },
+  { key: "Birthday7", src: "birthday7" },
+  { key: "Birthday8", src: "birthday8" },
+  { key: "Birthday9", src: "birthday9" },
+  { key: "Birthday10", src: "birthday10" },
+];
+
+export const maternityImages = [
+  { key: "Maternity1", src: "maternity1" },
+  { key: "Maternity4", src: "maternity4" },
+  { key: "Maternity3", src: "maternity3" },
+  { key: "Maternity2", src: "maternity2" },
+  { key: "Maternity5", src: "maternity5" },
+  { key: "Maternity6", src: "maternity6" },
+  { key: "Maternity7", src: "maternity7" },
 ];

@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { assets, haldiImages } from "../assets/assets";
+import { assets, birthdayImages } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
 import ImageViewer from "../components/ImageViewer";
 
 
-
-const Haldi = () => {
+const Birthday = () => {
     const [loadedImages, setLoadedImages] = useState({});
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const imageUrls = haldiImages.map(img => assets[img.src]);
+    const imageUrls = birthdayImages.map(img => assets[img.src]);
 
     const handleImageLoad = (imageName) => {
         setLoadedImages(prev => ({ ...prev, [imageName]: true }));
@@ -40,19 +39,19 @@ const Haldi = () => {
                             className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
-                            Haldi Gallery
+                            Birthday Gallery
                         </h2>
 
                         {/* Gallery Grid */}
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-                            {haldiImages.map((image, index) => (
+                            {birthdayImages.map((image, index) => (
                                 <div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(index)}>
                                     <div className="block">
                                         <figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100 aspect-4/3">
                                             {!loadedImages[image.key] && <MainLoader />}
                                             <img
                                                 src={assets[image.src]}
-                                                alt="Haldi"
+                                                alt="Birthday"
                                                 className={`w-full h-full object-cover transition-opacity duration-500 ${loadedImages[image.key] ? 'opacity-100' : 'opacity-0'}`}
                                                 loading="lazy"
                                                 onLoad={() => handleImageLoad(image.key)}
@@ -77,4 +76,4 @@ const Haldi = () => {
     );
 };
 
-export default Haldi;
+export default Birthday;

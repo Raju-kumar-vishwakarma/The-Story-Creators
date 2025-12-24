@@ -1,16 +1,8 @@
 import React, { useState } from "react";
-import { assets } from "../assets/assets";
+import { assets, preWeddingImages } from "../assets/assets";
 import MainLoader from "../components/MainLoader";
 import ImageViewer from "../components/ImageViewer";
 
-const preWeddingImages = [
-    { key: "PreWedding1", src: "prewedding1" },
-    { key: "PreWedding2", src: "prewedding2" },
-    { key: "PreWedding3", src: "prewedding3" },
-    { key: "PreWedding4", src: "prewedding4" },
-    { key: "PreWedding5", src: "prewedding5" },
-    { key: "PreWedding6", src: "prewedding6" },
-];
 
 const PreWedding = () => {
     const [loadedImages, setLoadedImages] = useState({});
@@ -55,7 +47,7 @@ const PreWedding = () => {
                             {preWeddingImages.map((image, index) => (
                                 <div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(index)}>
                                     <div className="block">
-                                        <figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100 aspect-[4/3]">
+                                        <figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100 aspect-4/3">
                                             {!loadedImages[image.key] && <MainLoader />}
                                             <img
                                                 src={assets[image.src]}

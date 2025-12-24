@@ -39,10 +39,9 @@ const Footer = () => {
                                     href="https://maps.google.com/maps?q=Street+No.4,+Mahadev+Ghat,+Tiranga+Chouk,+Raipur"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center px-7 py-2.5 border border-gray-300 bg-white hover:bg-gray-100 text-sm font-light rounded-full hover:scale-105 transition-all duration-300"
+                                    className="inline-flex items-center justify-center text-sm hover:scale-105 transition-all duration-300"
                                 >
-                                    <img src={assets.googleMapIcon} alt="Google Map" className="h-6 w-6 mr-2" />
-                                    Find Us
+                                    <img src={assets.googleMapIcon} alt="Google Map" className="h-10 w-10 mr-2" />
                                 </a>
                             </div>
 
@@ -82,6 +81,8 @@ const Footer = () => {
                         <NavLink to="/engagement" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Engagement</NavLink>
                         <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
                         <NavLink to="/haldi" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Haldi</NavLink>
+                        <NavLink to="/birthday" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Birthday</NavLink>
+                        <NavLink to="/maternity" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Maternity</NavLink>
                     </div>
                 </div>
 

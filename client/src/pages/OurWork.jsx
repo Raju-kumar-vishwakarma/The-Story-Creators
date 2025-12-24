@@ -8,8 +8,8 @@ const categories = [
 		id: "wedding",
 		title: "Weeding",
 		images: [
-			{ key: "wedding1", src: "wedding1" },
-			{ key: "wedding2", src: "wedding2" },
+			{ key: "wedding9", src: "wedding9" },
+			{ key: "wedding19", src: "wedding19" },
 		],
 	},
 	{
@@ -34,6 +34,22 @@ const categories = [
 		images: [
 			{ key: "Haldi1", src: "haldi1" },
 			{ key: "Haldi2", src: "haldi2" },
+		],
+	},
+	{
+		id: "birthday",
+		title: "Birthday",
+		images: [
+			{ key: "Birthday4", src: "birthday4" },
+			{ key: "Birthday5", src: "birthday5" },
+		],
+	},
+	{
+		id: "maternity",
+		title: "Maternity",
+		images: [
+			{ key: "Maternity1", src: "maternity1" },
+			{ key: "Maternity4", src: "maternity4" },
 		],
 	},
 ];
@@ -88,25 +104,32 @@ const OurWork = () => {
 
 							{/* Gallery Grid */}
 							<div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-								{category.images.map((image, index) => (
-									<div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(category.id, index)}>
-										<div className="block">
-											<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
-												{!loadedImages[image.key] && <MainLoader />}
-												<img
-													src={assets[image.src]}
-													alt={category.title}
-													className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages[image.key] ? 'opacity-100' : 'opacity-0'}`}
-													loading="lazy"
-													onLoad={() => handleImageLoad(image.key)}
-												/>
-											</figure>
-											<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
-												{/* Category Title */}
-											</h3>
+								{category.images.map((image, index) => {
+									const src = assets[image.src];
+									return (
+										<div key={image.key} className="group cursor-pointer" onClick={() => handleImageClick(category.id, index)}>
+											<div className="block">
+												<figure className="relative overflow-hidden rounded-lg mb-4 hover:scale-105 transition-transform duration-300 bg-gray-100">
+													{!loadedImages[image.key] && <MainLoader />}
+													{src ? (
+														<img
+															src={src}
+															alt={category.title}
+															className={`w-full h-auto object-cover transition-opacity duration-500 ${loadedImages[image.key] ? 'opacity-100' : 'opacity-0'}`}
+															loading="lazy"
+															onLoad={() => handleImageLoad(image.key)}
+														/>
+													) : (
+														<div className="w-full aspect-4/3 flex items-center justify-center text-gray-500 text-sm">Image coming soon</div>
+													)}
+												</figure>
+												<h3 className="text-xl md:text-2xl font-semibold text-black text-center group-hover:text-gray-700 transition-colors">
+													{/* Category Title */}
+												</h3>
+											</div>
 										</div>
-									</div>
-								))}
+									);
+								})}
 							</div>
 
 							{/* See All Button */}
