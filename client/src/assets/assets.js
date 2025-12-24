@@ -106,13 +106,13 @@ import birthday9 from "../assets/birthday/bday9.jpg";
 import birthday10 from "../assets/birthday/bday10.jpg";
 
 
-import maternity1 from "../assets/maternity/img1.jpeg";
-import maternity2 from "../assets/maternity/img2.jpeg";
-import maternity3 from "../assets/maternity/img3.jpeg";
-import maternity4 from "../assets/maternity/img4.jpeg";
-import maternity5 from "../assets/maternity/img5.jpeg";
-import maternity6 from "../assets/maternity/img6.jpeg";
-import maternity7 from "../assets/maternity/img7.jpeg";
+import maternity1 from "../assets/Maternity/img1.jpeg";
+import maternity2 from "../assets/Maternity/img2.jpeg";
+import maternity3 from "../assets/Maternity/img3.jpeg";
+import maternity4 from "../assets/Maternity/img4.jpeg";
+import maternity5 from "../assets/Maternity/img5.jpeg";
+import maternity6 from "../assets/Maternity/img6.jpeg";
+import maternity7 from "../assets/Maternity/img7.jpeg";
 
 
 export const assets = {
