@@ -118,6 +118,7 @@ const Gallery = () => {
 			{ value: "all", label: "All" },
 			{ value: "wedding", label: "WEDDING" },
 			{ value: "pre-wedding", label: "PRE WEDDING" },
+			{ value: "haldi", label: "HALDI" },
 		],
 		[]
 	);

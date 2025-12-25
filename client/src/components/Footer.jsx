@@ -1,14 +1,15 @@
 import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
-import { MapPin } from "lucide-react";
+import BookingModal from "./BookingModal";
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const [isBookingOpen, setIsBookingOpen] = useState(false);
 
     return (
-        <footer className="container mx-auto border-t border-gray-200">
+        <footer className=" md:px-15 mx-auto border-t border-gray-200">
             <div className="w-full p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-10 text-gray-800">
                 {/* Left Section */}
                 <div className="space-y-6 max-w-xl w-full md:w-auto">
@@ -26,24 +27,15 @@ const Footer = () => {
                             EVERY MOMENT TELLS A STORY-LET'S SAVE YOURS.
                         </h2>
                         <div className="flex flex-row gap-4 mt-6">
-                            <div className="">
-                                <a
-                                    href="https://wa.me/919131628219"
-                                    className="inline-flex items-center justify-center rounded-full hover:bg-black text-white px-7 py-3 text-sm font-light bg-primary-red/60   hover:scale-105 transition-all duration-300"
+                            <div className="pt-2">
+                                <button
+                                    onClick={() => setIsBookingOpen(true)}
+                                    className="inline-flex items-center justify-center rounded-full hover:bg-black text-white px-7 py-2.5 text-sm font-light bg-primary-red/60  hover:scale-105 transition-all duration-300 cursor-pointer"
                                 >
                                     Book Now
-                                </a>
+                                </button>
                             </div>
-                            <div>
-                                <a
-                                    href="https://maps.google.com/maps?q=Street+No.4,+Mahadev+Ghat,+Tiranga+Chouk,+Raipur"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center text-sm hover:scale-105 transition-all duration-300"
-                                >
-                                    <img src={assets.googleMapIcon} alt="Google Map" className="h-10 w-10 mr-2" />
-                                </a>
-                            </div>
+
 
 
                         </div>
@@ -51,7 +43,18 @@ const Footer = () => {
                     <div className="space-y-3 text-base sm:text-xl md:text-lg font-extralight">
                         <div className="font-light leading-snug">
                             <h2>Office:</h2>
-                            <p className="font-extralight ">Street No.4, Mahadev Ghat, Tiranga Chouk, Raipur</p>
+                            <div className="flex items-center gap-2">
+                                
+                                <a
+                                    href="https://maps.google.com/maps?q=Street+No.4,+Mahadev+Ghat,+Tiranga+Chouk,+Raipur"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center text-sm hover:scale-105 transition-all duration-300"
+                                >
+                                    <img src={assets.googleMapIcon} alt="Google Map" className="h-6 w-8" />
+                                </a>
+                                <p className="font-extralight ">Street No.4, Mahadev Ghat, Tiranga Chouk, Raipur</p>
+                            </div>
                         </div>
                         <div className="font-light leading-snug">
                             <h2>Phone:</h2>
@@ -66,14 +69,6 @@ const Footer = () => {
 
                 {/* Center Navigation */}
                 <div className="flex flex-row md:justify-around w-full items-start justify-start gap-20 md:gap-0 ">
-                    <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight ">
-                        <h4 className="font-light mb-1">Quick Links</h4>
-                        <NavLink to="/" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Home</NavLink>
-                        <NavLink to="/our-work" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Our Work</NavLink>
-                        <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
-                        <NavLink to="/contact" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Contact</NavLink>
-                        <NavLink to="/about-us" className="hover:underline text-gray-700 transition-all hover:animate-pulse">About Us</NavLink>
-                    </div>
                     <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight">
                         <h4 className="font-light mb-1">Services</h4>
                         <NavLink to="/wedding" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Wedding</NavLink>
@@ -84,6 +79,15 @@ const Footer = () => {
                         <NavLink to="/birthday" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Birthday</NavLink>
                         <NavLink to="/maternity" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Maternity</NavLink>
                     </div>
+                    <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight ">
+                        <h4 className="font-light mb-1">Quick Links</h4>
+                        <NavLink to="/" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Home</NavLink>
+                        <NavLink to="/our-work" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Our Work</NavLink>
+                        <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
+                        <NavLink to="/contact" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Contact</NavLink>
+                        <NavLink to="/about-us" className="hover:underline text-gray-700 transition-all hover:animate-pulse">About Us</NavLink>
+                    </div>
+                    
                 </div>
 
                 {/* Social Links */}
@@ -116,6 +120,7 @@ const Footer = () => {
                     </a>
                 </p>
             </div>
+            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
         </footer>
     );
 };

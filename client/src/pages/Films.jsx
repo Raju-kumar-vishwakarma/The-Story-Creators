@@ -7,6 +7,7 @@ const categories = [
 	{ key: "all", label: "All" },
 	{ key: "wedding", label: "WEDDING" },
 	{ key: "pre-wedding", label: "PRE WEDDING" },
+	{ key: "haldi", label: "HALDI" },
 ];
 
 const Films = () => {
@@ -26,7 +27,7 @@ const Films = () => {
 						className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
 						style={{ fontFamily: "'Playfair Display', serif" }}
 					>
-						Our Creativity
+						Films
 					</h1>
 				</div>
 

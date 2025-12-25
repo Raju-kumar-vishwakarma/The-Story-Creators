@@ -12,7 +12,7 @@ const Carousel = () => {
   const prev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
   const next = () => setCurrent((prev) => (prev + 1) % images.length);
 
-  // Auto switch every 5s
+  // Auto switch every 3s
   useEffect(() => {
     const timer = setTimeout(next, 3000);
     return () => clearTimeout(timer);

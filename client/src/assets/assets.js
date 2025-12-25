@@ -241,27 +241,35 @@ export const filmItems = [
   {
     thumb: film3,
     video: "https://youtube.com/shorts/fRvoxTdejzI?si=Un0VbvCdcE3r7Tx1",
-    category: "wedding",
+    category: "haldi",
   },
 ];
 
 export const photoItems = [
   { url: gallery1, category: "pre-wedding" },
   { url: gallery2, category: "haldi" },
+    { url:  engagement13, category: "engagement" },
   { url: gallery7, category: "pre-wedding" },
   { url: gallery8, category: "haldi" },
   { url: gallery12, category: "wedding" },
+   { url: maternity6, category: "maternity" },
   // { url: gallery4, category: "pre-wedding" },
   { url: gallery9, category: "pre-wedding" },
   { url: gallery5, category: "engagement" },
   { url: gallery10, category: "engagement" },
+
   { url: gallery6, category: "haldi" },
   { url: gallery11, category: "wedding" },
+  { url: wedding21, category: "wedding" },
+ 
   // Birthday
   { url: birthday1, category: "birthday" },
   { url: birthday2, category: "birthday" },
+  { url: birthday4, category: "birthday" },
   { url: maternity1, category: "maternity" },
   { url: maternity4, category: "maternity" },
+   { url: wedding11, category: "wedding" },
+ 
 
 
 ];
@@ -368,4 +376,90 @@ export const maternityImages = [
   { key: "Maternity5", src: "maternity5" },
   { key: "Maternity6", src: "maternity6" },
   { key: "Maternity7", src: "maternity7" },
+];
+
+
+export const servicesData = [
+  {
+    id: 1,
+    name: "Wedding Shoot",
+    image: wedding19,
+  },
+  {
+    id: 2,
+    name: "Pre Wedding Shoot",
+    image: prewedding3,
+  },
+  {
+    id: 3,
+    name: "Maternity Shoot",
+    image: maternity4,},
+  {
+    id: 4,
+    name: "Baby Shoot",
+    image : birthday3,
+  },
+  {
+    id: 5,
+    name: "Corporate Shoot",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: 6,
+    name: "Fashion Shoot",
+    image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=1000&auto=format&fit=crop",
+  },
+  {
+    id: 7,
+    name: "Album designing",
+    image: "https://zookbinders.com/wp-content/uploads/2021/02/Design-Spread.jpg"
+  },
+  {
+    id: 8,
+    name: "Ad Making",
+    image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROrAMKsYEpbeATl8WUz4pqruUdJpY798LA3w&s"
+  },
+  {
+    id: 9,
+    name: "Photo Editing",
+    image: "https://showit.com/wp-content/uploads/2016/01/blog-featured-image-default.jpg"  },
+  {
+    id: 10,
+    name: "Video Editing",
+  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS43XxM5cRBp1gi9SgQuuG7T3R6VGKJmH36UA&s"  },
+  {
+    id: 11,
+    name: "Product Shoot",
+    image: "https://images.unsplash.com/photo-1491553895911-0055eca6402d?q=80&w=1000&auto=format&fit=crop",
+
+  },
+  {
+    id: 12,
+    name: "Event Photography",
+    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1000&auto=format&fit=crop"
+
+  },
+];
+
+export const defaultItems = [
+	{
+		name: "Raipur",
+		image:
+			"https://i.ytimg.com/vi/EYMA2tP9MAU/maxresdefault.jpg",
+	},
+	// {
+	// 	name: "Bhilai",
+	// 	image:
+	// 		"https://images.unsplash.com/photo-1557305355-9d7d0a37b57c?q=80&w=1600&auto=format&fit=crop",
+	// },
+	{
+		name: "Jaipur",
+		image:
+			"https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop",
+	},
+	{
+		name: "Delhi",
+		image:
+			"https://media.gettyimages.com/id/483390211/video/india-gate.jpg?s=640x640&k=20&c=JPh0kfESvyJmbvylq5_MiBHrUZDCVpNNFRZlUK8ZZzo=",
+	}
 ];

@@ -1,13 +1,14 @@
 import React from "react";
+import FAQ from "../components/Onboarding/FAQ";
 
 const AboutUs = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero */}
-            <section className="w-full px-4 sm:px-6 lg:px-12 mt-20 pt-10 md:pt-16">
+            <section className="w-full px-4 sm:px-6 lg:px-12 mt-20 pt-10  md:pt-16">
                 <div className="mx-auto max-w-6xl text-center space-y-4">
                     <h1
-                        className="text-3xl md:text-4xl text-black font-light"
+                        className="text-3xl md:text-4xl text-black font-semibold"
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
                         About Us
@@ -19,17 +20,17 @@ const AboutUs = () => {
             </section>
 
             {/* Story + Highlights */}
-            <section className="w-full px-4 sm:px-6 lg:px-12 pb-14">
+            <section className="w-full px-4 sm:px-6 lg:px-12 pb-14 mt-8">
                 <div className="mx-auto max-w-6xl space-y-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
                         <div className="space-y-4">
                             <h3 className="text-2xl md:text-3xl font-light text-black md:text-start text-center">Our Story</h3>
-                            <p className="text-gray-700 leading-relaxed font-light">
+                            <p className="text-gray-700 leading-relaxed font-light text-center md:text-start">
                                 The Story Creators began with a simple promise: every couple deserves a film and photo story that
                                 feels honest, artful, and alive. From the first hello to the final frame, we listen closely so your
                                 film reflects who you are—not a template.
                             </p>
-                            <p className="text-gray-700 leading-relaxed font-light">
+                            <p className="text-gray-700 leading-relaxed font-light text-center md:text-start">
                                 We blend documentary instincts with cinematic polish, focusing on real interactions, true colors,
                                 and the little in-between moments that become your family’s favorite memories.
                             </p>
@@ -55,19 +56,19 @@ const AboutUs = () => {
 
                     {/* Stats */}
                     <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-6">
-                        <div className="rounded-2xl border border-gray-100 p-4 md:p-5 text-center bg-gray-50">
+                        <div className="rounded-2xl border border-gray-100 px-4 md:px-5 py-8 text-center bg-gray-50">
                             <div className="text-2xl md:text-3xl font-light text-black">120+</div>
                             <p className="text-sm text-gray-600 font-light">Weddings documented</p>
                         </div>
-                        <div className="rounded-2xl border border-gray-100 p-4 md:p-5 text-center bg-gray-50">
+                        <div className="rounded-2xl border border-gray-100 px-4 md:px-5 py-8 text-center bg-gray-50">
                             <div className="text-2xl md:text-3xl font-light text-black">50+</div>
                             <p className="text-sm text-gray-600 font-light">Cities covered</p>
                         </div>
-                        <div className="rounded-2xl border border-gray-100 p-4 md:p-5 text-center bg-gray-50">
-                            <div className="text-2xl md:text-3xl font-light text-black">4.9★</div>
+                        <div className="rounded-2xl border border-gray-100 px-4 md:px-5 py-8 text-center bg-gray-50">
+                            <div className="text-2xl md:text-3xl font-light text-black">4.9 ★</div>
                             <p className="text-sm text-gray-600 font-light">Client happiness</p>
                         </div>
-                        <div className="rounded-2xl border border-gray-100 p-4 md:p-5 text-center bg-gray-50">
+                        <div className="rounded-2xl border border-gray-100 px-4 md:px-5 py-8 text-center bg-gray-50">
                             <div className="text-2xl md:text-3xl font-light text-black">All day</div>
                             <p className="text-sm text-gray-600 font-light">From first look to last dance</p>
                         </div>
@@ -112,19 +113,20 @@ const AboutUs = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-between gap-4 bg-black text-white rounded-2xl px-6 md:px-8 py-6 shadow-md">
                         <div className="space-y-1 text-center sm:text-left">
                             <p className="text-lg md:text-xl font-light">Ready to save your story?</p>
-                            <p className="text-sm md:text-base text-gray-200 font-light">
+                            <p className="text-sm md:text-base text-gray-200 font-extralight">
                                 Tell us the moments that matter most. We will handle the rest with heart.
                             </p>
                         </div>
                         <a
                             href="/contact"
-                            className="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-2 text-sm md:text-base font-medium shadow hover:shadow-md transition"
+                            className="inline-flex items-center justify-center rounded-full bg-white text-black px-5 py-3 text-sm md:text-base font-light shadow hover:shadow-md transition"
                         >
                             Start a conversation
                         </a>
                     </div>
                 </div>
             </section>
+            <FAQ />
         </div>
     );
 };

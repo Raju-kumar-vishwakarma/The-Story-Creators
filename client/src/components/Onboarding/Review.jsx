@@ -97,17 +97,17 @@ const Review = () => {
 	const visibleReviews = reviewsData.slice(currentIndex, currentIndex + cardsPerView);
 
 	return (
-		<section className={"relative w-full bg-white py-16 md:py-24"}>
+		<section className={"relative w-full bg-white mb-20 "}>
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 				{/* Heading */}
 				<div className="mb-12 text-center">
 					<h2 
-						className="text-3xl md:text-5xl font-light tracking-tight text-black mb-4"
+						className="text-3xl md:text-5xl font-semibold tracking-tight text-black mb-4"
 						style={{ fontFamily: "'Playfair Display', serif" }}
 					>
 						What Our Clients Say
 					</h2>
-					<p className="text-gray-600 text-sm md:text-base font-light">
+					<p className="text-gray-600 text-sm md:text-base font-extralight">
 						Stories from hearts we've captured
 					</p>
 				</div>
@@ -117,7 +117,7 @@ const Review = () => {
 					{/* Left Arrow */}
 					<button
 						onClick={handlePrev}
-						className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-8 z-10 bg-white border border-blue-200 hover:bg-blue-50 text-blue-600 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110"
+						className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:-translate-x-4 md:-translate-x-8 z-10 bg-white border border-red-200 hover:bg-red-50 text-primary-red rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110"
 						aria-label="Previous reviews"
 					>
 						<ChevronLeft size={24} className="sm:hidden" />
@@ -125,7 +125,7 @@ const Review = () => {
 					</button>
 
 					{/* Cards Grid */}
-					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10">
+					<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-10 md:border-0 border border-gray-200 ">
 						{visibleReviews.map((review) => (
 							<div
 								key={review.id}
@@ -137,13 +137,13 @@ const Review = () => {
 								</h3>
 
 								{/* Designation */}
-								<p className="text-sm text-gray-500 mb-4 font-light">
+								<p className="text-sm text-primary-red mb-4 font-light">
 									{review.designation}
 								</p>
 
 								{/* Review Text */}
 								<p
-									className="text-gray-700 text-sm leading-relaxed mb-6 grow"
+									className="text-gray-700 text-sm leading-relaxed grow font-extralight"
 									style={{
 										display: "-webkit-box",
 										WebkitBoxOrient: "vertical",
@@ -161,7 +161,7 @@ const Review = () => {
 					{/* Right Arrow */}
 					<button
 						onClick={handleNext}
-						className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-8 z-10 bg-white border border-blue-200 hover:bg-blue-50 text-blue-600 rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110"
+						className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 sm:translate-x-4 md:translate-x-8 z-10 bg-white border border-red-200 hover:bg-red-50 text-primary-red rounded-full p-2 sm:p-3 shadow-lg transition-all duration-300 hover:scale-110"
 						aria-label="Next reviews"
 					>
 						<ChevronRight size={24} className="sm:hidden" />
