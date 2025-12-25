@@ -1,128 +1,203 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
-import React, { useState } from "react";
-import { assets } from "../assets/assets";
-import { NavLink } from "react-router-dom";
-import BookingModal from "./BookingModal";
-
+import React from "react";
+import {
+  Camera,
+  Facebook,
+  Twitter,
+  Instagram,
+  Youtube,
+  Send,
+  Phone,
+  Mail,
+  MapPin,
+} from "lucide-react";
 const Footer = () => {
-    const currentYear = new Date().getFullYear();
-    const [isBookingOpen, setIsBookingOpen] = useState(false);
+  return (
+    <footer className="relative z-20 bg-gradient-to-b from-[#f7f5f2] via-[#ebe7e2] to-[#cfcac4] border-t border-black/10 overflow-hidden">
+      {/* subtle animated glow */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_30%_20%,rgba(0,0,0,0.05),transparent_60%)] animate-pulse" />
 
-    return (
-        <footer className=" md:px-15 mx-auto border-t border-gray-200">
-            <div className="w-full p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col md:flex-row justify-between items-start gap-8 md:gap-10 text-gray-800">
-                {/* Left Section */}
-                <div className="space-y-6 max-w-xl w-full md:w-auto">
-                    <div className="space-y-3 ">
-                        <NavLink to="/" aria-label="Home" className="flex items-center gap-2 md:gap-3">
-                            <img src={assets.logo} alt="Logo" className="h-12 w-12 md:h-15 md:w-15 object-contain" />
-                            <h1
-                                className="text-2xl sm:text-3xl md:text-4xl text-black mt-2 whitespace-nowrap"
-                                style={{ fontFamily: "'Playfair Display', serif" }}
-                            >
-                                The Story Creators
-                            </h1>
-                        </NavLink>
-                        <h2 className="text-base md:text-lg font-extralight leading-snug">
-                            EVERY MOMENT TELLS A STORY-LET'S SAVE YOURS.
-                        </h2>
-                        <div className="flex flex-row gap-4 mt-6">
-                            <div className="pt-2">
-                                <button
-                                    onClick={() => setIsBookingOpen(true)}
-                                    className="inline-flex items-center justify-center rounded-full hover:bg-black text-white px-7 py-2.5 text-sm font-light bg-primary-red/60  hover:scale-105 transition-all duration-300 cursor-pointer"
-                                >
-                                    Book Now
-                                </button>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                    <div className="space-y-3 text-base sm:text-xl md:text-lg font-extralight">
-                        <div className="font-light leading-snug">
-                            <h2>Office:</h2>
-                            <div className="flex items-center gap-2">
-                                
-                                <a
-                                    href="https://maps.google.com/maps?q=Street+No.4,+Mahadev+Ghat,+Tiranga+Chouk,+Raipur"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center text-sm hover:scale-105 transition-all duration-300"
-                                >
-                                    <img src={assets.googleMapIcon} alt="Google Map" className="h-6 w-8" />
-                                </a>
-                                <p className="font-extralight ">Street No.4, Mahadev Ghat, Tiranga Chouk, Raipur</p>
-                            </div>
-                        </div>
-                        <div className="font-light leading-snug">
-                            <h2>Phone:</h2>
-                            <p className="font-extralight">+91 91316 28219, +91 81095 19281</p>
-                        </div>
-                        <div className="font-light leading-snug">
-                            <h2>Email:</h2>
-                            <p className="font-extralight ">photography.thestorycreators@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* Center Navigation */}
-                <div className="flex flex-row md:justify-around w-full items-start justify-start gap-20 md:gap-0 ">
-                    <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight">
-                        <h4 className="font-light mb-1">Services</h4>
-                        <NavLink to="/wedding" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Wedding</NavLink>
-                        <NavLink to="/pre-wedding" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Pre-Wedding</NavLink>
-                        <NavLink to="/engagement" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Engagement</NavLink>
-                        <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
-                        <NavLink to="/haldi" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Haldi</NavLink>
-                        <NavLink to="/birthday" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Birthday</NavLink>
-                        <NavLink to="/maternity" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Maternity</NavLink>
-                    </div>
-                    <div className="flex flex-col gap-y-1 text-base sm:text-xl md:text-lg font-extralight ">
-                        <h4 className="font-light mb-1">Quick Links</h4>
-                        <NavLink to="/" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Home</NavLink>
-                        <NavLink to="/our-work" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Our Work</NavLink>
-                        <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
-                        <NavLink to="/contact" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Contact</NavLink>
-                        <NavLink to="/about-us" className="hover:underline text-gray-700 transition-all hover:animate-pulse">About Us</NavLink>
-                    </div>
-                    
-                </div>
-
-                {/* Social Links */}
-                <div className="space-y-4 text-xl sm:text-2xl font-light leading-snug w-full md:w-auto">
-                    <h4>Follow Us</h4>
-                    <div className="flex gap-4 sm:gap-6 text-gray-600">
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:text-blue-600">
-                            <Facebook size={20} className="sm:w-6 sm:h-6" />
-                        </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X / Twitter" className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:text-sky-500">
-                            <Twitter size={20} className="sm:w-6 sm:h-6" />
-                        </a>
-                        <a href="https://www.instagram.com/thestorycreators_photography/?igsh=MXJtZnczbHc5ZHN1Zw%3D%3D&utm_source=qr#" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:text-pink-600">
-                            <Instagram size={20} className="sm:w-6 sm:h-6" />
-                        </a>
-                        <a href="https://youtube.com/@thestorycreatorsphotography?si=NnaK-23HMirqsANh" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="transform transition-transform duration-300 ease-in-out hover:scale-110 hover:text-red-600">
-                            <Youtube size={20} className="sm:w-6 sm:h-6" />
-                        </a>
-                    </div>
-                </div>
+      <div className="max-w-7xl mx-auto px-6 py-20 animate-[fadeUp_1s_ease-out]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14">
+          {/* BRAND */}
+          <div className="space-y-6">
+            <div className="flex items-center gap-4 group">
+              <div
+                className="w-12 h-12 rounded-xl bg-black flex items-center justify-center shadow-lg 
+                group-hover:rotate-6 group-hover:scale-110 transition-all duration-500"
+              >
+                <Camera className="w-6 h-6 text-white" />
+              </div>
+              <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 leading-tight">
+                The Story Creators
+              </h2>
             </div>
 
-            {/* Bottom Bar */}
-            <div className="border-t border-gray-100 py-4 md:py-6 px-4 md:px-0 text-center text-sm md:text-lg text-gray-500 space-y-2 font-extralight">
-                <p className="leading-relaxed ">Copyright © {currentYear} <span className="text-black font-normal ">TheStoryCreators</span> – All Rights Reserved.</p>
-                <p className="leading-relaxed">
-                    Developed by{" "}
-                    <a href="https://www.zscircle.tech" target="_blank" rel="noopener noreferrer" className=" hover:text-special-red transition-colors font-extralight text-primary-red">
-                        Team ZSCircle
+            <p className="text-base md:text-lg text-gray-700 leading-relaxed max-w-sm">
+              Every moment tells a story — let’s preserve yours with cinematic,
+              timeless photography crafted with emotion.
+            </p>
+
+            <div className="flex gap-4 pt-4">
+              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-11 h-11 rounded-full border border-black/20 flex items-center justify-center
+                  hover:bg-black hover:text-white hover:shadow-2xl hover:-translate-y-2
+                  transition-all duration-300"
+                >
+                  <Icon className="w-5 h-5" />
+                </a>
+              ))}
+            </div>
+
+            {/* 🌈 MAP ICON WITH PULSE + BOUNCE */}
+            <a
+              href="https://maps.google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 group"
+            >
+              <span
+                className="relative w-11 h-11 rounded-full bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 
+                  flex items-center justify-center shadow-xl
+                  animate-bounce group-hover:animate-none"
+              >
+                <span className="absolute inset-0 rounded-full animate-ping bg-pink-400 opacity-40" />
+                <MapPin className="w-5 h-5 text-white relative z-10" />
+              </span>
+
+              <span className="leading-snug group-hover:text-black transition">
+                Street No.4, Mahadev Ghat <br />
+                Tiranga Chouk, Raipur
+              </span>
+            </a>
+          </div>
+
+          {/* QUICK LINKS */}
+          <div>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
+              Quick Links
+            </h3>
+            <ul className="space-y-4 text-base md:text-lg text-gray-700">
+              {["Home", "Our Work", "Films", "Contact", "About Us"].map(
+                (link) => (
+                  <li key={link}>
+                    <a
+                      href="#"
+                      className="relative inline-block hover:text-black transition after:absolute
+                    after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black
+                    hover:after:w-full after:transition-all after:duration-300"
+                    >
+                      {link}
                     </a>
-                </p>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
+          {/* SERVICES */}
+          <div>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-6">
+              Services
+            </h3>
+            <ul className="space-y-4 text-base md:text-lg text-gray-700">
+              {[
+                "Wedding",
+                "Pre-Wedding",
+                "Engagement",
+                "Films",
+                "Haldi",
+                "Birthday",
+                "Maternity",
+              ].map((service) => (
+                <li key={service}>
+                  <a
+                    href="#"
+                    className="hover:translate-x-2 inline-block transition-transform duration-300 hover:text-black"
+                  >
+                    {service}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* NEWSLETTER + CONTACT */}
+          <div className="space-y-6">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900">
+              Stay Updated
+            </h3>
+
+            <p className="text-base md:text-lg text-gray-700">
+              Get photography tips, offers & behind-the-scenes stories directly
+              in your inbox.
+            </p>
+
+            <div
+              className="flex rounded-full overflow-hidden border border-black/30 bg-white shadow-md
+              focus-within:ring-2 focus-within:ring-black transition"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-5 py-3 text-base outline-none"
+              />
+              <button className="bg-black text-white px-6 hover:bg-gray-800 hover:scale-105 transition">
+                <Send className="w-5 h-5" />
+              </button>
             </div>
-            <BookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
-        </footer>
-    );
+
+            <div className="pt-3 space-y-4 text-base md:text-lg text-gray-700">
+              <a
+                href="tel:+919131628219"
+                className="flex items-center gap-3 hover:text-black transition"
+              >
+                <Phone className="w-5 h-5" />
+                +91 91316 28219
+              </a>
+
+              <a
+                href="mailto:photo@storycreators.com"
+                className="flex items-center gap-3 hover:text-black transition"
+              >
+                <Mail className="w-5 h-5" />
+                photo@storycreators.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* BOTTOM BAR */}
+        <div className="mt-20 pt-8 border-t border-black/10 flex flex-col md:flex-row justify-between items-center gap-6">
+          <p className="text-base md:text-lg text-gray-700">
+            © 2025{" "}
+            <span className="font-medium text-gray-900">
+              The Story Creators
+            </span>{" "}
+            — All Rights Reserved.
+          </p>
+          <div className="flex gap-8 text-base md:text-lg">
+            <a href="#" className="hover:text-black transition">
+              Privacy Policy
+            </a>
+            <a href="#" className="hover:text-black transition">
+              Terms of Service
+            </a>
+          </div>
+        </div>
+      </div>
+
+      {/* keyframes */}
+      <style>{`
+        @keyframes fadeUp {
+          from { opacity: 0; transform: translateY(40px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
+    </footer>
+  );
 };
 
 export default Footer;
