@@ -1,15 +1,15 @@
+import React from "react";
 import {
-  Camera,
   Facebook,
-  Twitter,
   Instagram,
+  Twitter,
   Youtube,
-  Send,
   Phone,
   Mail,
   MapPin,
+  Camera,
+  Send
 } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="relative z-20 bg-gradient-to-b from-[#f7f5f2] via-[#ebe7e2] to-[#cfcac4] border-t border-black/10 overflow-hidden">
