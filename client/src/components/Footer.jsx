@@ -28,7 +28,7 @@ const Footer = () => {
                 <Camera className="w-6 h-6 text-white" />
               </div>
               <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 leading-tight">
-                The Story <br /> Creators
+                The Story Creators
               </h2>
             </div>
 
