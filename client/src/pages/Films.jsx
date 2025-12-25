@@ -65,13 +65,13 @@ const Films = () => {
 								loading="lazy"
 							/>
 
-							{/* Hover overlay with play button */}
+							{/* Play button */}
 							<a
 								href={item.video}
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label="Open video"
-								className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"
+								className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-100 transition-opacity"
 							>
 								<span className="bg-white/90 text-black rounded-full p-3 shadow-lg flex items-center justify-center">
 									<Play size={26} />
