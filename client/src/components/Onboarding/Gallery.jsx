@@ -18,21 +18,34 @@ const Filters = ({ active, onChange, options }) => (
 	</div>
 );
 
-const animationVariants = ["fade-in", "fade-right", "zoom-in", "fade-left", "fade-down"];
+const animationVariants = [
+	"fade-in", 
+	"fade-right", 
+	"zoom-in", 
+	"fade-left", 
+	"fade-down",
+	"slide-up",
+	"bounce-in",
+	"rotate-in"
+];
 
 const PhotoGrid = ({ items, animationKey, onImageClick }) => (
 	<div className="columns-2 sm:columns-2 lg:columns-3 gap-5 [column-fill:balance]">
 		{items.map((it, idx) => (
 			<div
 				key={`${animationKey}-${idx}-${it.url}`}
-				className={`mb-5 break-inside-avoid overflow-hidden rounded-2xl cursor-pointer  shadow-[0_22px_55px_-28px_rgba(0,0,0,0.45)] ${animationVariants[idx % animationVariants.length]}`}
-				style={{ animationDelay: `${(idx % animationVariants.length) * 80}ms` }}
+				className={`mb-5 break-inside-avoid overflow-hidden rounded-2xl cursor-pointer shadow-[0_22px_55px_-28px_rgba(0,0,0,0.45)] ${animationVariants[idx % animationVariants.length]}`}
+				style={{ 
+					animationDelay: `${idx * 100}ms`,
+					animationDuration: '0.6s',
+					animationFillMode: 'both'
+				}}
 				onClick={() => onImageClick(idx)}
 			>
 				<img
 					src={it.url}
 					alt={it.category || `gallery-${idx}`}
-					className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-1"
+					className="w-full h-full object-cover transition-transform duration-500 ease-out hover:scale-105 hover:-translate-y-1 active:scale-95"
 					loading="lazy"
 				/>
 			</div>
@@ -49,19 +62,23 @@ const FilmGrid = ({ items, animationKey }) => (
 				target="_blank"
 				rel="noreferrer"
 				className={`block group overflow-hidden rounded-2xl border border-gray-200 bg-white relative shadow-[0_22px_55px_-28px_rgba(0,0,0,0.45)] ${animationVariants[idx % animationVariants.length]}`}
-				style={{ animationDelay: `${(idx % animationVariants.length) * 80}ms` }}
+				style={{ 
+					animationDelay: `${idx * 100}ms`,
+					animationDuration: '0.6s',
+					animationFillMode: 'both'
+				}}
 			>
 				<div className="aspect-video w-full overflow-hidden">
 					<img
 						src={it.thumb}
 						alt={it.category}
-						className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-hover:-translate-y-1"
+						className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-hover:-translate-y-1 active:scale-95"
 						loading="lazy"
 					/>
 				</div>
 				{/* Play overlay */}
 				<div className="absolute inset-0 flex items-center justify-center bg-black/0 group-hover:bg-black/20 transition">
-					<div className="h-12 w-12 rounded-full bg-white/90 text-black flex items-center justify-center shadow">
+					<div className="h-12 w-12 rounded-full bg-white/90 text-black flex items-center justify-center shadow transform transition-transform group-hover:scale-110 active:scale-95">
 						<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
 							<path d="M8 5v14l11-7z" />
 						</svg>

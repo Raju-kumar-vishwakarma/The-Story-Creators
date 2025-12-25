@@ -404,11 +404,11 @@ export const servicesData = [
     name: "Corporate Shoot",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
   },
-  {
-    id: 6,
-    name: "Fashion Shoot",
-    image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=1000&auto=format&fit=crop",
-  },
+  // {
+  //   id: 6,
+  //   name: "Fashion Shoot",
+  //   image: "https://images.unsplash.com/photo-1505142468610-359e7d316be0?q=80&w=1000&auto=format&fit=crop",
+  // },
   {
     id: 7,
     name: "Album designing",
@@ -436,6 +436,12 @@ export const servicesData = [
   {
     id: 12,
     name: "Event Photography",
+    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1000&auto=format&fit=crop"
+
+  },
+  {
+    id: 6,
+    name: "Event Website",
     image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1000&auto=format&fit=crop"
 
   },
