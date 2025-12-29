@@ -1,5 +1,6 @@
 import React from "react";
 import FAQ from "../components/Onboarding/FAQ";
+import { assets } from "../assets/assets";
 
 const AboutUs = () => {
     return (
@@ -23,7 +24,7 @@ const AboutUs = () => {
             <section className="w-full px-4 sm:px-6 lg:px-12 pb-14 mt-8">
                 <div className="mx-auto max-w-6xl space-y-12">
                     <div className="grid md:grid-cols-2 gap-10 items-start">
-                        <div className="space-y-4">
+                        <div className="space-y-5">
                             <h3 className="text-2xl md:text-3xl font-light text-black md:text-start text-center">Our Story</h3>
                             <p className="text-gray-700 leading-relaxed font-light text-center md:text-start">
                                 The Story Creators began with a simple promise: every couple deserves a film and photo story that
@@ -33,24 +34,39 @@ const AboutUs = () => {
                             <p className="text-gray-700 leading-relaxed font-light text-center md:text-start">
                                 We blend documentary instincts with cinematic polish, focusing on real interactions, true colors,
                                 and the little in-between moments that become your family’s favorite memories.
+                            </p>                            <p className="text-gray-700 leading-relaxed font-extralight text-center md:text-start">
+                                What started as a passion for capturing authentic love stories has evolved into a mission: to preserve
+                                the essence of your celebration in a way that feels timeless. We've documented over 120 weddings,
+                                traveled to 50+ cities, and built a reputation on trust, creativity, and meticulous attention to detail.
                             </p>
                         </div>
 
-                        <div className="grid gap-4">
-                            <div className="p-5 md:p-6 rounded-2xl border border-gray-100 shadow-sm bg-white">
-                                <h4 className="text-xl font-light text-black mb-2">Documentary heart, cinematic finish</h4>
-                                <p className="text-gray-700 leading-relaxed font-light">
-                                    We capture the day as it unfolds, then weave it together with clean pacing, intentional music,
-                                    and true-to-life color so your story feels timeless.
-                                </p>
+                        <div className="relative">
+                            <div className="overflow-hidden rounded-2xl shadow-xl">
+                                <img 
+                                    src={assets.wedding9} 
+                                    alt="Our Photography Work" 
+                                    className="w-full h-[450px] md:h-[500px] object-cover"
+                                />
                             </div>
-                            <div className="p-5 md:p-6 rounded-2xl border border-gray-100 shadow-sm bg-white">
-                                <h4 className="text-xl font-light text-black mb-2">People first, always</h4>
-                                <p className="text-gray-700 leading-relaxed font-light">
-                                    We keep you relaxed, guide only when needed, and prioritize comfort so your smiles, tears, and
-                                    laughter are genuine—not posed.
-                                </p>
-                            </div>
+                        </div>
+                    </div>
+
+                    {/* Feature Cards Section */}
+                    <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+                        <div className="p-6 md:p-8 rounded-2xl border border-gray-100 shadow-sm bg-white hover:shadow-md transition-shadow">
+                            <h4 className="text-xl md:text-2xl font-light text-black mb-3">Documentary heart, cinematic finish</h4>
+                            <p className="text-gray-700 leading-relaxed font-light">
+                                We capture the day as it unfolds, then weave it together with clean pacing, intentional music,
+                                and true-to-life color so your story feels timeless.
+                            </p>
+                        </div>
+                        <div className="p-6 md:p-8 rounded-2xl border border-gray-100 shadow-sm bg-white hover:shadow-md transition-shadow">
+                            <h4 className="text-xl md:text-2xl font-light text-black mb-3">People first, always</h4>
+                            <p className="text-gray-700 leading-relaxed font-light">
+                                We keep you relaxed, guide only when needed, and prioritize comfort so your smiles, tears, and
+                                laughter are genuine—not posed.
+                            </p>
                         </div>
                     </div>
 
