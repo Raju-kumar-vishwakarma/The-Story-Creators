@@ -11,8 +11,8 @@ const OurLocations = ({ items = defaultItems }) => {
 			<div className="mx-auto max-w-8xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 ">
 				<div className="mb-6 md:mb-10">
 					<h1
-						className="text-3xl md:text-6xl font-bold text-black mb-12 text-center"
-						style={{ fontFamily: "'Playfair Display', serif" }}
+						className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
+                            style={{ fontFamily: "'Playfair Display', serif" }}
 					>
 						Our Locations
 					</h1>

@@ -116,7 +116,7 @@ const FAQ = () => {
 			<div className="mx-auto max-w-5xl space-y-8">
 				<div className="mb-6 md:mb-10">
 					<h1 
-						className="text-3xl md:text-5xl font-bold text-center text-gray-800"
+						className="text-3xl md:text-5xl font-bold text-center text-black"
             style={{ fontFamily: "'Playfair Display', serif" }}
 					>FAQ'S</h1>
 				</div>

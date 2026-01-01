@@ -9,8 +9,8 @@ const Services = () => {
         {/* Title */}
         <div className="mb-10 md:mb-12">
           <h2
-            className="text-3xl md:text-5xl font-bold text-center text-gray-800"
-            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
+                            style={{ fontFamily: "'Playfair Display', serif" }}
           >
             Our All Services
           </h2>

@@ -1,41 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
 import { filmItems, photoItems } from "../../assets/assets";
 import ImageViewer from "../ImageViewer";
-
-const PhotoSkeleton = () => (
-	<div className="columns-2 sm:columns-2 lg:columns-3 gap-5 [column-fill:balance]">
-		{[...Array(12)].map((_, idx) => (
-			<div
-				key={idx}
-				className="mb-5 break-inside-avoid overflow-hidden rounded-2xl bg-gray-200 animate-pulse"
-				style={{ height: idx % 3 === 0 ? '350px' : idx % 2 === 0 ? '280px' : '320px' }}
-			>
-				<div className="w-full h-full bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 relative overflow-hidden">
-					<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
-				</div>
-			</div>
-		))}
-	</div>
-);
-
-const FilmSkeleton = () => (
-	<div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-		{[...Array(6)].map((_, idx) => (
-			<div
-				key={idx}
-				className="block overflow-hidden rounded-2xl bg-gray-200 animate-pulse"
-			>
-				<div className="aspect-video w-full bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 relative overflow-hidden">
-					<div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-shimmer"></div>
-					<div className="absolute inset-0 flex items-center justify-center">
-						<div className="h-12 w-12 rounded-full bg-gray-300/50"></div>
-					</div>
-				</div>
-			</div>
-		))}
-	</div>
-);
-
 const Filters = ({ active, onChange, options }) => (
 	<div className="w-full flex items-center justify-center gap-3 flex-wrap">
 		{options.map((opt) => (
@@ -130,23 +95,7 @@ const Gallery = () => {
 	const [hasEntered, setHasEntered] = useState(false);
 	const [isViewerOpen, setIsViewerOpen] = useState(false);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
-	const [photosLoading, setPhotosLoading] = useState(true);
-	const [filmsLoading, setFilmsLoading] = useState(true);
 	const sectionRef = useRef(null);
-
-	useEffect(() => {
-		const photoTimer = setTimeout(() => {
-			setPhotosLoading(false);
-		}, 1500);
-		return () => clearTimeout(photoTimer);
-	}, [photoFilter]);
-
-	useEffect(() => {
-		const filmTimer = setTimeout(() => {
-			setFilmsLoading(false);
-		}, 1500);
-		return () => clearTimeout(filmTimer);
-	}, [filmFilter]);
 
 	useEffect(() => {
 		const node = sectionRef.current;
@@ -224,7 +173,8 @@ const Gallery = () => {
 		>
 			<div className="  px-3 sm:px-6 md:px-10 lg:px-16 xl:px-24">
 				<div className="mb-6 md:mb-10">
-					<h1 className="text-3xl md:text-6xl font-semibold tracking-tight text-center"
+					<h1 
+					className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
 						style={{ fontFamily: "'Playfair Display', serif" }}
 					>Gallery</h1>
 				</div>
@@ -233,12 +183,12 @@ const Gallery = () => {
 					<Filters active={photoFilter} onChange={setPhotoFilter} options={photoOptions} />
 				</div>
 
-			{photosLoading ? (
-				<PhotoSkeleton />
-			) : hasEntered ? (
+				{hasEntered ? (
 				<PhotoGrid items={filteredPhotos} animationKey={photoFilter} onImageClick={handleImageClick} />
 			) : (
-				<div className="grid place-items-center py-10 text-gray-500 text-sm"></div>
+				<div className="grid place-items-center py-10 text-black text-sm">
+
+				</div>
 			)}
 
 				<div className="mt-8 flex justify-center">
@@ -251,7 +201,8 @@ const Gallery = () => {
 				</div>
 
 				<div className="mt-14 mb-4">
-					<h2 className="text-3xl md:text-6xl font-semibold tracking-tight text-center"
+					<h2 
+					className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
 						style={{ fontFamily: "'Playfair Display', serif" }}
 					>Films</h2>
 				</div>
@@ -260,22 +211,22 @@ const Gallery = () => {
 					<Filters active={filmFilter} onChange={setFilmFilter} options={filmOptions} />
 				</div>
 
-			{filmsLoading ? (
-				<FilmSkeleton />
-			) : hasEntered ? (
-				<FilmGrid items={filteredFilms} animationKey={filmFilter} />
-			) : (
-				<div className="grid place-items-center py-8 text-gray-500 text-sm"></div>
+				{hasEntered ? (
+					<FilmGrid items={filteredFilms} animationKey={filmFilter} />
+				) : (
+				<div className="grid place-items-center py-8 text-black text-sm">
+
+				</div>
 			)}
 
-				<div className="mt-8 flex justify-center">
-					<a
-						href="/films"
-						className="px-5 py-2 rounded-full border border-gray-300 bg-white hover:bg-gray-100 transition font-extralight"
-					>
-						See All
-					</a>
-				</div>
+			<div className="mt-8 flex justify-center">
+				<a
+					href="/films"
+					className="px-5 py-2 rounded-full border border-gray-300 bg-white hover:bg-gray-100 transition font-extralight"
+				>
+					See All
+				</a>
+			</div>
 
 				<ImageViewer
 					isOpen={isViewerOpen}
