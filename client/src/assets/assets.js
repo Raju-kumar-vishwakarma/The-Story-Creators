@@ -460,9 +460,9 @@ export const defaultItems = [
 		name: "Madhya Pradesh",
 		image:"https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS2VWPHkVs-PvB1UYqSdUfrqu0hPQc-ecwc-m01qlESbKgLAduH9yn_Pd16OXi6KJpjZbukO7vGELYLiYwKI0_cpxc&s=19"	},
 	{
-		name: "Raipur",
+		name: "Goa",
 		image:
-"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw4KL_OcvJfo-QmOKOUM-WOwPc59M655f16p0iRc7qf3IbHkIC24xDgcIahIYEIS34W1G3xer4eF1wbpHO396sxr0QckEJqF4hcxbVfo0SY2QHd5mTUbsZRSzxLQSIkM6Fdard5=w1080-h624-n-k-no"	},
+"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwKlTczHn44QwUgs98dG_bVb_wq7KP9Omm50JW2EwPhGRIX1Ov1tE5ViGEi4Szdy8jeuEq3CiVKEqiZU7GZT6VEM0R0JV2NUU3sF-Lui5hTAGZrClTewPninwKNzINfVZXC1XD0rw=w1080-h624-n-k-no"},
 	{
 		name: "Chhattisgarh",
 		image:

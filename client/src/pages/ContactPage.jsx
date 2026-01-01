@@ -66,8 +66,8 @@ const ContactPage = () => {
                         {/* Contact Details */}
                         <div className="space-y-6 mb-12">
                             <div>
-                                <a href="mailto:info@thestorycreators.com" className="text-gray-800 text-lg hover:text-primary-red transition-colors">
-                                    info@thestorycreators.com
+                                <a href="mailto:photography.thestorycreators@gmail.com" className="text-gray-800 text-lg hover:text-primary-red transition-colors">
+                                    photography.thestorycreators@gmail.com
                                 </a>
                             </div>
                             <div>
