@@ -457,23 +457,18 @@ export const servicesData = [
 
 export const defaultItems = [
 	{
+		name: "Madhya Pradesh",
+		image:"https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS2VWPHkVs-PvB1UYqSdUfrqu0hPQc-ecwc-m01qlESbKgLAduH9yn_Pd16OXi6KJpjZbukO7vGELYLiYwKI0_cpxc&s=19"	},
+	{
 		name: "Raipur",
 		image:
-			"https://i.ytimg.com/vi/EYMA2tP9MAU/maxresdefault.jpg",
-	},
-	// {
-	// 	name: "Bhilai",
-	// 	image:
-	// 		"https://images.unsplash.com/photo-1557305355-9d7d0a37b57c?q=80&w=1600&auto=format&fit=crop",
-	// },
+"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw4KL_OcvJfo-QmOKOUM-WOwPc59M655f16p0iRc7qf3IbHkIC24xDgcIahIYEIS34W1G3xer4eF1wbpHO396sxr0QckEJqF4hcxbVfo0SY2QHd5mTUbsZRSzxLQSIkM6Fdard5=w1080-h624-n-k-no"	},
 	{
-		name: "Jaipur",
+		name: "Chhattisgarh",
 		image:
-			"https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?q=80&w=1600&auto=format&fit=crop",
-	},
+"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwH9VEzLYY6_A-27Ga2YekRmgO-BtyE7xMsUjB_Ikxs2WAa8DGhffmvet5WtR32f126Sd40erhRCMj_o2QeAObHPZJsCcCx-4OiDl6aeeL6UZ_3i9cox5OjhjpkbSxvY5ZXJVfA=w1080-h624-n-k-no"	},
 	{
-		name: "Delhi",
+		name: "visakhapatnam",
 		image:
-			"https://media.gettyimages.com/id/483390211/video/india-gate.jpg?s=640x640&k=20&c=JPh0kfESvyJmbvylq5_MiBHrUZDCVpNNFRZlUK8ZZzo=",
-	}
+"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw0pjmUFJi2CI73QhbA80CAGbwiddf2VKl-5xy-fmwh-ZjvXIHul1_npMz56REY6JeHh1oF5Ui1UPi5gTDc0OrkdFj_DJs61HAZ5TyyaxWY4jEVxHjwuwp2shZODSkKf45a7bG1Zg=w1080-h624-n-k-no"	}
 ];

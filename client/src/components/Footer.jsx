@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
+import { Facebook, Instagram, Twitter, Youtube, Phone, Mail } from "lucide-react";
 import React, { useState } from "react";
 import { assets } from "../assets/assets";
 import { NavLink } from "react-router-dom";
@@ -58,11 +58,17 @@ const Footer = () => {
                         </div>
                         <div className="font-light leading-snug">
                             <h2>Phone:</h2>
-                            <p className="font-extralight">+91 91316 28219, +91 81095 19281</p>
+                            <div className="flex items-center gap-2">
+                                <Phone size={20} className="text-primary-red flex-shrink-0" />
+                                <p className="font-extralight">+91 91316 28219, +91 81095 19281</p>
+                            </div>
                         </div>
                         <div className="font-light leading-snug">
                             <h2>Email:</h2>
-                            <p className="font-extralight ">photography.thestorycreators@gmail.com</p>
+                            <div className="flex items-center gap-2">
+                                <Mail size={20} className="text-primary-red flex-shrink-0" />
+                                <p className="font-extralight ">photography.thestorycreators@gmail.com</p>
+                            </div>
                         </div>
                     </div>
                 </div>

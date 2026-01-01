@@ -46,7 +46,7 @@ const AboutUs = () => {
                                 <img 
                                     src={assets.wedding9} 
                                     alt="Our Photography Work" 
-                                    className="w-full h-[450px] md:h-[500px] object-cover"
+                                    className="w-full h-[350px] md:h-[400px] object-cover"
                                 />
                             </div>
                         </div>

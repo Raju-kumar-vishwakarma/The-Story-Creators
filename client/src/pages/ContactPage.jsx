@@ -200,11 +200,7 @@ const ContactPage = () => {
                                 </button>
 
                                 {/* Terms */}
-                                <p className="text-xs text-gray-500 text-center mt-6">
-                                    By contacting us, you agree to our{" "}
-                                    <a href="#" className="underline hover:text-gray-700">Terms of service</a> and{" "}
-                                    <a href="#" className="underline hover:text-gray-700">Privacy Policy</a>
-                                </p>
+
                             </form>
                         </div>
                     </div>
