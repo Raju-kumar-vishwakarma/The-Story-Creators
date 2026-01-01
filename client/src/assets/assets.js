@@ -450,7 +450,7 @@ export const servicesData = [
   {
     id: 6,
     name: "Event Website",
-    image: "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1000&auto=format&fit=crop"
+    image: "https://colorlib.com/wp/wp-content/uploads/sites/2/weddings-by-lisa-nicole-service-website.jpg.avif"
 
   },
 ];
