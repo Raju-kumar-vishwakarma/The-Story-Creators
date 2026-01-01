@@ -142,7 +142,7 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
-            <FAQ />
+            <FAQ className=""/>
         </div>
     );
 };

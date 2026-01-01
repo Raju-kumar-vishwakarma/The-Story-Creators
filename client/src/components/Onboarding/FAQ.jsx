@@ -112,11 +112,12 @@ const FAQ = () => {
 	};
 
 	return (
-		<section className="w-full bg-white px-4 sm:px-6 lg:px-12 mb-15">
+		<section className="w-full bg-white px-4 sm:px-6 lg:px-12 mb-15 mt-16 md:mt-20 ">
 			<div className="mx-auto max-w-5xl space-y-8">
 				<div className="mb-6 md:mb-10">
-					<h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-center"
-						style={{ fontFamily: "'Playfair Display', serif" }}
+					<h1 
+						className="text-3xl md:text-5xl font-bold text-center text-gray-800"
+            style={{ fontFamily: "'Playfair Display', serif" }}
 					>FAQ'S</h1>
 				</div>
 

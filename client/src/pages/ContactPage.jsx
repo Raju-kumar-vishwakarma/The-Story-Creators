@@ -54,7 +54,7 @@ const ContactPage = () => {
                     {/* Left Section - Company Info */}
                     <div className="hidden lg:flex flex-col justify-start pt-8">
                         <h1 
-                            className="text-3xl md:text-4xl font-light text-black mb-12 "
+                            className="text-3xl md:text-5xl font-light text-black mb-12 "
 						style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             Contact Us
@@ -110,7 +110,7 @@ const ContactPage = () => {
 
                     {/* Right Section - Form */}
                     <div className="flex items-center justify-center mt-8">
-                        <div className="w-full max-w-md lg:bg-white lg:rounded-2xl lg:border lg:border-gray-200 lg:p-8 lg:shadow-lg">
+                        <div className="w-full max-w-md lg:bg-white lg:rounded-2xl lg:border lg:border-gray-200 lg:p-8 ">
                             <h2 className="text-3xl md:text-2xl font-light text-black mb-3 md:mb-2 text-center md:text-left" 
                                 style={{ fontFamily: "'Playfair Display', serif" }}>
                                 Get in Touch

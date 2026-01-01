@@ -24,7 +24,7 @@ const Films = () => {
 				{/* Heading */}
 				<div className="mb-8 md:mb-12 text-center">
 					<h1
-						className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+						className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
 						style={{ fontFamily: "'Playfair Display', serif" }}
 					>
 						Films

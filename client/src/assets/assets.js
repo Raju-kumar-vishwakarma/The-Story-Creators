@@ -251,24 +251,32 @@ export const photoItems = [
     { url:  engagement13, category: "engagement" },
   { url: gallery7, category: "pre-wedding" },
   { url: gallery8, category: "haldi" },
-  { url: gallery12, category: "wedding" },
-   { url: maternity6, category: "maternity" },
-  // { url: gallery4, category: "pre-wedding" },
+  // { url: gallery12, category: "wedding" },
   { url: gallery9, category: "pre-wedding" },
   { url: gallery5, category: "engagement" },
   { url: gallery10, category: "engagement" },
 
   { url: gallery6, category: "haldi" },
-  { url: gallery11, category: "wedding" },
-  { url: wedding21, category: "wedding" },
- 
+
+  { url: wedding2, category: "wedding" },
+  { url: wedding3, category: "wedding" },
+    { url: wedding22, category: "wedding" },
+
+  { url: wedding5, category: "wedding" },
+  { url: wedding6, category: "wedding" },
+  { url: wedding7, category: "wedding" },
+  { url: wedding8, category: "wedding" },
+  { url: wedding9, category: "wedding" },
+  { url: wedding10, category: "wedding" },
+  { url: wedding11, category: "wedding" },
+  { url: wedding12, category: "wedding" },
+  { url: wedding14, category: "wedding" },
+  { url: wedding15, category: "wedding" },
   // Birthday
   { url: birthday1, category: "birthday" },
   { url: birthday2, category: "birthday" },
   { url: birthday4, category: "birthday" },
-  { url: maternity1, category: "maternity" },
-  { url: maternity4, category: "maternity" },
-   { url: wedding11, category: "wedding" },
+
  
 
 

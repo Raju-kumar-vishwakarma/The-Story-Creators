@@ -36,7 +36,7 @@ const Weeding = () => {
                 <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24">
                     <div className="mb-16">
                         <h2
-                            className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+                            className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
                             style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             Wedding Gallery

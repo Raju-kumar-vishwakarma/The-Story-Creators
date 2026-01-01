@@ -129,3 +129,16 @@
     scale:calc(0.98);
     transition: transform 0.3s ease-in-out;
 }
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
