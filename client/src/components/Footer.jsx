@@ -46,7 +46,7 @@ const Footer = () => {
                             <div className="flex items-center gap-2">
                                 
                                 <a
-                                    href="https://maps.google.com/maps?q=Street+No.4,+Mahadev+Ghat,+Tiranga+Chouk,+Raipur"
+                                     href="https://maps.google.com/maps?q=21.202583,81.574333"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center justify-center text-sm hover:scale-105 transition-all duration-300"
