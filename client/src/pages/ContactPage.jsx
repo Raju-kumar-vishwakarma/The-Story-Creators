@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { toast } from 'sonner';
-import { useAppContext } from "../context/AppContext";
 import ButtonLoader from "../components/ButtonLoader";
-// import assets from "../assets/assets.js";
 
 const ContactPage = () => {
     const defaultFormData = {
@@ -13,10 +11,9 @@ const ContactPage = () => {
         message: "",
     };
 
-    const { axios } = useAppContext();
-
     const [formData, setFormData] = useState(defaultFormData);
     const [loading, setLoading] = useState(false);
+    const [result, setResult] = useState("");
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -27,21 +24,35 @@ const ContactPage = () => {
         e.preventDefault();
         try {
             setLoading(true);
-            const submissionData = {
-                name: `${formData.firstName} ${formData.lastName}`,
-                email: formData.email,
-                phone: formData.phone,
-                message: formData.message,
-            };
-            const { data } = await axios.post("/api/contact", submissionData);
+            setResult("Sending...");
+
+            const formDataForSubmit = new FormData();
+            formDataForSubmit.append("access_key", "d3790c7c-50e7-43c5-a356-7c9a0f12a6b0");
+            formDataForSubmit.append("name", `${formData.firstName} ${formData.lastName}`);
+            formDataForSubmit.append("email", formData.email);
+            formDataForSubmit.append("phone", formData.phone);
+            formDataForSubmit.append("message", formData.message);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formDataForSubmit
+            });
+
+            const data = await response.json();
+
             if (data.success) {
-                toast.success(data.message);
+                setResult("Form Submitted Successfully");
+                toast.success("Message sent successfully!");
                 setFormData(defaultFormData);
             } else {
-                toast.error(data.message);
+                console.log("Error", data);
+                setResult(data.message);
+                toast.error(data.message || "Failed to submit form");
             }
         } catch (error) {
+            console.error("Error:", error);
             toast.error(error.message);
+            setResult("Error submitting form");
         } finally {
             setLoading(false);
         }

@@ -81,7 +81,6 @@ const Footer = () => {
                         <NavLink to="/pre-wedding" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Pre-Wedding</NavLink>
                         <NavLink to="/engagement" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Engagement</NavLink>
                         <NavLink to="/films" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Films</NavLink>
-                        <NavLink to="/haldi" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Haldi</NavLink>
                         <NavLink to="/birthday" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Birthday</NavLink>
                         <NavLink to="/maternity" className="hover:underline text-gray-700 transition-all hover:animate-pulse">Maternity</NavLink>
                     </div>
