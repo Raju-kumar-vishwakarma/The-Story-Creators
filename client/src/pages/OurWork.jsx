@@ -96,7 +96,7 @@ const OurWork = () => {
 					{categories.map((category) => (
 						<div key={category.id} className="mb-16">
 							<h2
-								className="text-3xl md:text-4xl font-bold text-black mb-12 text-center"
+								className="text-3xl md:text-5xl font-bold text-black mb-12 text-center"
 								style={{ fontFamily: "'Playfair Display', serif" }}
 							>
 								{category.title}
