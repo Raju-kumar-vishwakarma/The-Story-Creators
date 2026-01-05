@@ -243,6 +243,11 @@ export const filmItems = [
     video: "https://youtube.com/shorts/fRvoxTdejzI?si=Un0VbvCdcE3r7Tx1",
     category: "haldi",
   },
+  {
+    thumb: film3,
+    video: "https://youtube.com/shorts/o1qx8nW_HD8?si=Nn_SLgHG0qwiTuR-",
+    category: "haldi",
+  },
 ];
 
 export const photoItems = [
