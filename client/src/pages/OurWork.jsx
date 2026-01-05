@@ -6,7 +6,7 @@ import ImageViewer from "../components/ImageViewer";
 const categories = [
 	{
 		id: "wedding",
-		title: "Weeding",
+		title: "Wedding",
 		images: [
 			{ key: "wedding9", src: "wedding9" },
 			{ key: "wedding19", src: "wedding19" },

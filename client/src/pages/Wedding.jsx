@@ -4,7 +4,7 @@ import MainLoader from "../components/MainLoader";
 import ImageViewer from "../components/ImageViewer";
 
 
-const Weeding = () => {
+const Wedding = () => {
     const [loadedImages, setLoadedImages] = useState({});
     const [isViewerOpen, setIsViewerOpen] = useState(false);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -76,4 +76,4 @@ const Weeding = () => {
     );
 };
 
-export default Weeding;
+export default Wedding;

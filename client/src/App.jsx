@@ -14,13 +14,14 @@ import ChatBot from './components/ChatBot';
 import OurWork from './pages/OurWork';
 import Films from './pages/Films';
 import AboutUs from './pages/AboutUs';
-import Weeding from './pages/Weeding';
+import Weeding from './pages/Wedding';
 import PreWedding from './pages/PreWedding';
 import Engagement from './pages/Engagement';
 import Haldi from './pages/Haldi';
 import SocialButtons from './components/SocialButtons';
 import Birthday from './pages/Birthday';
 import Maternity from './pages/Maternity';
+import Wedding from './pages/Wedding';
 
 const App = () => {
   const [open, setOpen] = useState(false);
@@ -45,7 +46,7 @@ const App = () => {
         <Route path='/our-work' element={<OurWork/>} />
         <Route path='/films' element={<Films/>} />
         <Route path='/about-us' element={<AboutUs/>} />
-        <Route path='/wedding' element={<Weeding/>} />
+        <Route path='/wedding' element={<Wedding/>} />
         <Route path='/pre-wedding' element={<PreWedding/>} />
         <Route path='/pre-wedding' element={<PreWedding/>} />
         <Route path='/engagement' element={<Engagement/>} />
