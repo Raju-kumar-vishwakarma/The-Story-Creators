@@ -345,15 +345,19 @@ export const preWeddingImages = [
   { key: "PreWedding5", src: "prewedding5" },
   { key: "PreWedding6", src: "prewedding6" },
   { key: "PreWedding7", src: "prewedding7" },
-    { key: "PreWedding8", src: "prewedding8" },
-    { key: "PreWedding9", src: "prewedding9" },
-    { key: "PreWedding10", src: "prewedding10" },
-    { key: "PreWedding11", src: "prewedding11" },
-    { key: "PreWedding12", src: "prewedding12" },
-    { key: "PreWedding13", src: "prewedding13" },
-    { key: "PreWedding14", src: "prewedding14" },
-    { key: "PreWedding15", src: "prewedding15" },
-
+  { key: "PreWedding8", src: "prewedding8" },
+  { key: "PreWedding9", src: "prewedding9" },
+  { key: "PreWedding10", src: "prewedding10" },
+  { key: "PreWedding11", src: "prewedding11" },
+  { key: "PreWedding12", src: "prewedding12" },
+  { key: "PreWedding13", src: "prewedding13" },
+  { key: "PreWedding14", src: "prewedding14" },
+  { key: "PreWedding15", src: "prewedding15" },
+  { key: "PreWedding16", src: "prewedding16" },
+  { key: "PreWedding17", src: "prewedding17" },
+  { key: "PreWedding18", src: "prewedding18" },
+  { key: "PreWedding19", src: "prewedding19" },
+  { key: "PreWedding20", src: "prewedding20" },
 ];
 
 export const engagementImages = [
