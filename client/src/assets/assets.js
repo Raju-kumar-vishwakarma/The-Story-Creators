@@ -64,6 +64,12 @@ import prewedding12 from "../assets/prewedding/pre_wedding12.jpeg";
 import prewedding13 from "../assets/prewedding/pre_wedding13.jpeg";
 import prewedding14 from "../assets/prewedding/pre_wedding14.jpeg";
 import prewedding15 from "../assets/prewedding/pre_wedding15.jpeg";
+import prewedding16 from "../assets/prewedding/pre_wedding16.jpg";
+import prewedding17 from "../assets/prewedding/pre_wedding17.jpg";
+import prewedding18 from "../assets/prewedding/pre_wedding18.jpg";
+import prewedding19 from "../assets/prewedding/pre_wedding19.jpg";
+import prewedding20 from "../assets/prewedding/pre_wedding20.jpg";
+
 
 import engagement1 from "../assets/engagement/eng1.jpeg";
 import engagement2 from "../assets/engagement/engagement2.jpeg";
@@ -175,6 +181,11 @@ export const assets = {
   prewedding13,
   prewedding14,
   prewedding15,
+  prewedding16,
+  prewedding17,
+  prewedding18,
+  prewedding19,
+  prewedding20,
 
   engagement1,
   engagement2,
