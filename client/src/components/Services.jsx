@@ -19,9 +19,7 @@ const Services = () => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
 					{servicesData.map((service, idx) => (
-						<a
-							key={`${service.name}-${idx}`}
-							href={service.href || "#"}
+						<div
 							className="group relative block overflow-hidden rounded-2xl bg-gray-100 shadow-sm border border-gray-100 h-[220px] md:h-[260px]"
 						>
 							{/* Background image */}
@@ -45,7 +43,7 @@ const Services = () => {
 									{service.name}
 								</h3>
 							</div>
-						</a>
+						</div>
 					))}
 				</div>
       </div>

@@ -27,7 +27,7 @@ const ContactPage = () => {
             setResult("Sending...");
 
             const formDataForSubmit = new FormData();
-            formDataForSubmit.append("access_key", "d3790c7c-50e7-43c5-a356-7c9a0f12a6b0");
+            formDataForSubmit.append("access_key", import.meta.env.VITE_WEB3FORM_API_KEY);
             formDataForSubmit.append("name", `${formData.firstName} ${formData.lastName}`);
             formDataForSubmit.append("email", formData.email);
             formDataForSubmit.append("phone", formData.phone);
@@ -64,9 +64,9 @@ const ContactPage = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
                     {/* Left Section - Company Info */}
                     <div className="hidden lg:flex flex-col justify-start pt-8">
-                        <h1 
+                        <h1
                             className="text-3xl md:text-5xl font-light text-black mb-12 "
-						style={{ fontFamily: "'Playfair Display', serif" }}
+                            style={{ fontFamily: "'Playfair Display', serif" }}
                         >
                             Contact Us
                         </h1>
@@ -96,33 +96,47 @@ const ContactPage = () => {
                                     Our support team is available around the clock to address any concerns or questions you may have.
                                 </p>
                             </div>
-                            <div className="grid grid-cols-3 gap-6">
-                                <div>
-                                    <h4 className="text-sm font-light text-black mb-2">Photography</h4>
-                                    <p className="text-gray-600 text-xs leading-relaxed font-extralight">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                                {/* Card 1 */}
+                                <div className="group rounded-xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <h4 className="text-base font-medium text-black mb-2 group-hover:text-black/80">
+                                        Photography
+                                    </h4>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
                                         Wedding, pre-wedding, engagement, and event photography services.
                                     </p>
                                 </div>
-                                <div>
-                                    <h4 className="text-sm font-light text-black mb-2">Videography</h4>
-                                    <p className="text-gray-600 text-xs leading-relaxed">
+
+                                {/* Card 2 */}
+                                <div className="group rounded-xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <h4 className="text-base font-medium text-black mb-2 group-hover:text-black/80">
+                                        Videography
+                                    </h4>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
                                         Professional video coverage for your special moments and events.
                                     </p>
                                 </div>
-                                <div>
-                                    <h4 className="text-sm font-light text-black mb-2">Inquiries</h4>
-                                    <p className="text-gray-600 text-xs leading-relaxed">
+
+                                {/* Card 3 */}
+                                <div className="group rounded-xl border border-gray-200 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+                                    <h4 className="text-base font-medium text-black mb-2 group-hover:text-black/80">
+                                        Inquiries
+                                    </h4>
+                                    <p className="text-gray-600 text-sm leading-relaxed">
                                         For general inquiries, please contact us and we'll respond promptly.
                                     </p>
                                 </div>
+
                             </div>
+
                         </div>
                     </div>
 
                     {/* Right Section - Form */}
                     <div className="flex items-center justify-center mt-8">
                         <div className="w-full max-w-md lg:bg-white lg:rounded-2xl lg:border lg:border-gray-200 lg:p-8 ">
-                            <h2 className="text-3xl md:text-2xl font-light text-black mb-3 md:mb-2 text-center md:text-left" 
+                            <h2 className="text-3xl md:text-2xl font-light text-black mb-3 md:mb-2 text-center md:text-left"
                                 style={{ fontFamily: "'Playfair Display', serif" }}>
                                 Get in Touch
                             </h2>
@@ -201,13 +215,12 @@ const ContactPage = () => {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className={`w-full py-3.5 md:py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 transform text-sm ${
-                                        loading
+                                    className={`w-full py-3.5 md:py-3 px-6 rounded-lg font-semibold text-white transition-all duration-300 transform text-sm ${loading
                                             ? "bg-gray-400 cursor-not-allowed opacity-75"
                                             : "bg-black hover:bg-primary-red active:scale-95 cursor-pointer shadow-md hover:shadow-lg"
-                                    }`}
+                                        }`}
                                 >
-                                    {loading ? <ButtonLoader/> : "Submit"}
+                                    {loading ? <ButtonLoader /> : "Submit"}
                                 </button>
 
                                 {/* Terms */}

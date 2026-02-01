@@ -2,17 +2,20 @@
 @import "tailwindcss";
 
 @theme {
-  --color-special-blue: #0CA0E4;
-  --color-special-green: #DCF9E3;
-  --color-primary-red: #C23700;
+    --color-special-blue: #0CA0E4;
+    --color-special-green: #DCF9E3;
+    --color-primary-red: #C23700;
 }
 
 * {
     scroll-behavior: smooth;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
 }
 
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 .slider-image {
@@ -48,6 +51,7 @@
         opacity: 0;
         transform: translateY(20px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -62,6 +66,7 @@
     0% {
         width: 100%;
     }
+
     100% {
         width: 0%;
     }
@@ -76,6 +81,7 @@
         opacity: 0;
         transform: translateY(-10px);
     }
+
     100% {
         opacity: 1;
         transform: translateY(0);
@@ -125,8 +131,8 @@
     cursor: pointer;
 }
 
-.hover-scale:hover{
-    scale:calc(0.98);
+.hover-scale:hover {
+    scale: calc(0.98);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -134,6 +140,7 @@
     0% {
         transform: translateX(-100%);
     }
+
     100% {
         transform: translateX(100%);
     }

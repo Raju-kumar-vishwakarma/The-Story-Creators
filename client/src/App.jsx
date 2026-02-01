@@ -23,6 +23,7 @@ import Birthday from './pages/Birthday';
 import Maternity from './pages/Maternity';
 import Wedding from './pages/Wedding';
 
+
 const App = () => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);

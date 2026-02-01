@@ -120,6 +120,12 @@ import maternity5 from "../assets/Maternity/img5.jpeg";
 import maternity6 from "../assets/Maternity/img6.jpeg";
 import maternity7 from "../assets/Maternity/img7.jpeg";
 
+// Location Images
+import mp from "../assets/locations/mp.png";
+import cg from "../assets/locations/cg.png";
+import Goa from "../assets/locations/goa.png";
+import visakhapatnam from "../assets/locations/visakhapatnam.png";
+
 
 export const assets = {
   logo,
@@ -264,7 +270,7 @@ export const filmItems = [
 export const photoItems = [
   { url: gallery1, category: "pre-wedding" },
   { url: gallery2, category: "haldi" },
-    { url:  engagement13, category: "engagement" },
+  { url: engagement13, category: "engagement" },
   { url: gallery7, category: "pre-wedding" },
   { url: gallery8, category: "haldi" },
   // { url: gallery12, category: "wedding" },
@@ -276,7 +282,7 @@ export const photoItems = [
 
   { url: wedding2, category: "wedding" },
   { url: wedding3, category: "wedding" },
-    { url: wedding22, category: "wedding" },
+  { url: wedding22, category: "wedding" },
 
   { url: wedding5, category: "wedding" },
   { url: wedding6, category: "wedding" },
@@ -293,7 +299,7 @@ export const photoItems = [
   { url: birthday2, category: "birthday" },
   { url: birthday4, category: "birthday" },
 
- 
+
 
 
 ];
@@ -316,11 +322,11 @@ export const weddingImages = [
   { key: "wedding15", src: "wedding15" },
   { key: "wedding16", src: "wedding16" },
   { key: "wedding17", src: "wedding17" },
-    { key: "wedding18", src: "wedding18" },
-    { key: "wedding19", src: "wedding19" },
-    { key: "wedding20", src: "wedding20" },
-    { key: "wedding21", src: "wedding21" },
-    { key: "wedding22", src: "wedding22" },
+  { key: "wedding18", src: "wedding18" },
+  { key: "wedding19", src: "wedding19" },
+  { key: "wedding20", src: "wedding20" },
+  { key: "wedding21", src: "wedding21" },
+  { key: "wedding22", src: "wedding22" },
 
 ];
 
@@ -421,11 +427,12 @@ export const servicesData = [
   {
     id: 3,
     name: "Maternity Shoot",
-    image: maternity4,},
+    image: maternity4,
+  },
   {
     id: 4,
     name: "Baby Shoot",
-    image : birthday3,
+    image: birthday3,
   },
   {
     id: 5,
@@ -445,16 +452,18 @@ export const servicesData = [
   {
     id: 8,
     name: "Ad Making",
-    image : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROrAMKsYEpbeATl8WUz4pqruUdJpY798LA3w&s"
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROrAMKsYEpbeATl8WUz4pqruUdJpY798LA3w&s"
   },
   {
     id: 9,
     name: "Photo Editing",
-    image: "https://showit.com/wp-content/uploads/2016/01/blog-featured-image-default.jpg"  },
+    image: "https://showit.com/wp-content/uploads/2016/01/blog-featured-image-default.jpg"
+  },
   {
     id: 10,
     name: "Video Editing",
-  image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS43XxM5cRBp1gi9SgQuuG7T3R6VGKJmH36UA&s"  },
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS43XxM5cRBp1gi9SgQuuG7T3R6VGKJmH36UA&s"
+  },
   {
     id: 11,
     name: "Product Shoot",
@@ -476,19 +485,20 @@ export const servicesData = [
 ];
 
 export const defaultItems = [
-	{
-		name: "Madhya Pradesh",
-		image:"https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS2VWPHkVs-PvB1UYqSdUfrqu0hPQc-ecwc-m01qlESbKgLAduH9yn_Pd16OXi6KJpjZbukO7vGELYLiYwKI0_cpxc&s=19"	},
-	{
-		name: "Goa",
-		image:
-"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwKlTczHn44QwUgs98dG_bVb_wq7KP9Omm50JW2EwPhGRIX1Ov1tE5ViGEi4Szdy8jeuEq3CiVKEqiZU7GZT6VEM0R0JV2NUU3sF-Lui5hTAGZrClTewPninwKNzINfVZXC1XD0rw=w1080-h624-n-k-no"},
-	{
-		name: "Chhattisgarh",
-		image:
-"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSwH9VEzLYY6_A-27Ga2YekRmgO-BtyE7xMsUjB_Ikxs2WAa8DGhffmvet5WtR32f126Sd40erhRCMj_o2QeAObHPZJsCcCx-4OiDl6aeeL6UZ_3i9cox5OjhjpkbSxvY5ZXJVfA=w1080-h624-n-k-no"	},
-	{
-		name: "visakhapatnam",
-		image:
-"https://lh3.googleusercontent.com/gps-cs-s/AG0ilSw0pjmUFJi2CI73QhbA80CAGbwiddf2VKl-5xy-fmwh-ZjvXIHul1_npMz56REY6JeHh1oF5Ui1UPi5gTDc0OrkdFj_DJs61HAZ5TyyaxWY4jEVxHjwuwp2shZODSkKf45a7bG1Zg=w1080-h624-n-k-no"	}
+  {
+    name: "Madhya Pradesh",
+    image: mp
+  },
+  {
+    name: "Goa",
+    image: Goa
+  },
+  {
+    name: "Chhattisgarh",
+    image: cg
+  },
+  {
+    name: "Visakhapatnam",
+    image: visakhapatnam
+  }
 ];
